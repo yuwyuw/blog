@@ -1,372 +1,1258 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   
-    <meta name="author" content="John Doe">
-  
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lemon&#39;s blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Lemon&#39;s blog">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Lemon&#39;s blog">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
+  <title>Lemon's blog</title>
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  
+
+
+
+
+
+
+
+
 </head>
 
-<body>
-  <div class="wrapper">
-    <header id="header">
-  <div class="title">
-    <h1><a href="/">Hexo</a></h1>
-    <p><a href="/"></a></p>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lemon's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
-  <nav class="nav">
-    <ul>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
       
-        <li><a href="/">Home</a></li>
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
       
-        <li><a href="/archives">Archives</a></li>
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
       
-      
-        <li><a href="/atom.xml">RSS</a></li>
+
       
     </ul>
-    <div class="clearfix"></div>
-  </nav>
-  <div class="clearfix"></div>
-</header>
-    <div class="content">
-
-
-
-
-  
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
-      <a href="/2017/12/27/hello-world/">
-  <time datetime="2017-12-27T05:54:09.000Z">
-    2017-12-27
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2017/12/27/hello-world/">Hello World</a></h1>
   
 
-  </header>
   
-  <div class="entry">
-    
-      <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
-      <a href="/2017/09/26/html-meta/">
-  <time datetime="2017-09-26T06:02:31.000Z">
-    2017-09-26
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2017/09/26/html-meta/">html_meta</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <p><a href="http://www.w3school.com.cn/tags/tag_meta.asp" target="_blank" rel="noopener">有关HTML<meta>标签的使用</a><br><a href="http://www.cnblogs.com/jerryshi/archive/2008/10/14/1310611.html" target="_blank" rel="noopener">meta http-equiv大全</a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">推荐使用：</span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"webkit"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge"</span>/&gt;</span></span><br><span class="line">涉及到后端项目</span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Cache-Control"</span> <span class="attr">content</span>=<span class="string">"no-cache, no-store, must-revalidate"</span> /&gt;</span></span><br><span class="line">禁止浏览器从本地机的缓存中调阅页面内容，网页不保存在缓存中，每次访问都刷新页面。这样设定，访问者将无法脱机浏览。</span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Pragma"</span> <span class="attr">content</span>=<span class="string">"no-cache"</span> /&gt;</span></span><br><span class="line">说明：指定网页在缓存中的过期时间，一旦网页过期，必须到服务器上重新调阅。</span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Expires"</span> <span class="attr">content</span>=<span class="string">"0"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="meta-renderer"><a href="#meta-renderer" class="headerlink" title="meta renderer"></a>meta renderer</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">我们可以使用标签来指定适合自己网站的渲染内核名称，当双核浏览器访问本网页时，</span><br><span class="line">就会根据我们的指示，选择我们指定的渲染内核来处理网页。</span><br><span class="line">若页面需默认用极速核，增加标签：</span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"webkit"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">若页面需默认用ie兼容内核，增加标签：</span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"ie-comp"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">若页面需默认用ie标准内核，增加标签：</span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"ie-stand"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">我们只需在网站的head标签中添加上面的代码，即可以相对应的模式来渲染网站。</span><br><span class="line">同时我们也可以同时指定多个内核名称，之间以符号”|”进行分隔，如下代码：</span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"webkit|ie-comp|ie-stand"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="X-UA-Compatible"><a href="#X-UA-Compatible" class="headerlink" title="X-UA-Compatible"></a>X-UA-Compatible</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">X-UA-Compatible是针对IE8新加的一个设置，对于IE8之外的浏览器是不识别的，这个区别与content="IE=7"在无论页面是否包含<span class="meta">&lt;!DOCTYPE&gt;</span>指令，都像是使用了Windows Internet Explorer 7的标准模式。而content="IE=EmulateIE7"模式遵循<span class="meta">&lt;!DOCTYPE&gt;</span>指令。对于多数网站来说，它是首选的兼容性模式。</span><br><span class="line"></span><br><span class="line">为了避免制作出的页面在IE8下面出现错误，建议直接将IE8使用IE7进行渲染。也就是直接在页面的header的meta标签中加入如下代码：</span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=7"</span> /&gt;</span> </span><br><span class="line"></span><br><span class="line"> X-UA-Compatible 是针对 IE8 版本的一个特殊文件头标记，用于为 IE8 指定不同的页面渲染模式。由于当下 IE6 和 IE7 使用率依然较高，综合考虑，启用 IE8 版本的 X-UA-Compatible 兼容模式显得相当重要。</span><br><span class="line"></span><br><span class="line"> 各种兼容模式代码示例如下：</span><br><span class="line"> 1.<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=5"</span> /&gt;</span></span><br><span class="line">像是使用了 Windows Internet Explorer 7 的 Quirks 模式，这与 Windows Internet Explorer 5 显示内容的方式很相似。</span><br><span class="line"></span><br><span class="line">2.<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=7"</span> /&gt;</span></span><br><span class="line">无论页面是否包含 <span class="meta">&lt;!DOCTYPE&gt;</span> 指令，均使用 Windows Internet Explorer 7 的标准渲染模式。</span><br><span class="line"></span><br><span class="line">3.<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=8"</span> /&gt;</span></span><br><span class="line">开启 IE8 的标准渲染模式，但由于本身 X-UA-Compatible 文件头仅支持 IE8 以上版本，因此等同于冗余代码。</span><br><span class="line"></span><br><span class="line">4.<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"edge"</span> /&gt;</span></span><br><span class="line">Edge 模式通知 Windows Internet Explorer 以最高级别的可用模式显示内容，这实际上破坏了“锁定”模式。即如果你有IE9的话说明你有IE789，那么就调用高版本的那个也就是IE9。</span><br><span class="line"></span><br><span class="line">5.<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=Edge,chrome=1"</span> &gt;</span></span><br><span class="line">如果IE有安装Google Chrome Frame，那么就走安装的组件，如果没有就和<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"edge"</span> /&gt;</span>一样。</span><br><span class="line">说明：针对IE 6，7，8等版本的浏览器插件Google Chrome Frame，可以让用户的浏览器外观依然是IE的菜单和界面，但用户在浏览网页时，实际上使用的是Google Chrome浏览器内核。</span><br><span class="line"></span><br><span class="line">6.<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=EmulateIE7"</span> /&gt;</span></span><br><span class="line">EmulateIE7 模式通知 Windows Internet Explorer 使用 <span class="meta">&lt;!DOCTYPE&gt;</span> 指令确定如何呈现内容。标准模式指令以Windows Internet Explorer 7 标准模式显示，而 Quirks 模式指令以 IE5 模式显示。与 IE7 模式不同，EmulateIE7 模式遵循 <span class="meta">&lt;!DOCTYPE&gt;</span> 指令。对于多数网站来说，它是首选的兼容性模式。</span><br></pre></td></tr></table></figure>
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
-      <a href="/2017/09/26/laravel/">
-  <time datetime="2017-09-26T02:55:15.000Z">
-    2017-09-26
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2017/09/26/laravel/">laravel</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <p>有关mac laravel项目的搭建</p>
-<h3 id="1-服务器环境"><a href="#1-服务器环境" class="headerlink" title="1.服务器环境"></a>1.服务器环境</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PHP &gt;= 7.0.0</span><br><span class="line">PHP OpenSSL 扩展</span><br><span class="line">PHP PDO 扩展</span><br><span class="line">PHP Mbstring 扩展</span><br><span class="line">PHP Tokenizer 扩展</span><br><span class="line">PHP XML 扩展</span><br></pre></td></tr></table></figure>
-<h3 id="2-环境安装"><a href="#2-环境安装" class="headerlink" title="2.环境安装"></a>2.环境安装</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">安装依赖 PHP7</span><br><span class="line">     brew tap homebrew/php（如能搜到php71可忽略）</span><br><span class="line">     brew install  php71  php71-mcrypt</span><br><span class="line">     brew link php71 （设置当前环境所有 php 使用 php7）</span><br><span class="line"> </span><br><span class="line">启动 PHP-FPM</span><br><span class="line">     brew services start php71</span><br><span class="line">安装 Nginx</span><br><span class="line">     brew  install nginx  （已有忽略）</span><br><span class="line">安装 Composer (依赖包管理器)</span><br><span class="line">     brew install composer</span><br></pre></td></tr></table></figure>
-<h3 id="3-安装-Laravel-安装器"><a href="#3-安装-Laravel-安装器" class="headerlink" title="3.安装 Laravel 安装器"></a>3.安装 Laravel 安装器</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer global require "laravel/installer"</span><br></pre></td></tr></table></figure>
-<h3 id="4-添加环境变量"><a href="#4-添加环境变量" class="headerlink" title="4.添加环境变量"></a>4.添加环境变量</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH="$HOME/.composer/vendor/bin:$PATH"</span><br></pre></td></tr></table></figure>
-<h3 id="5-新建项目"><a href="#5-新建项目" class="headerlink" title="5.新建项目"></a>5.新建项目</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">laravel new blog    (新建项目名称叫 blog 并且在当前目录下生成 blog 文件夹)</span><br></pre></td></tr></table></figure>
-<h3 id="6-Copy-项目目录下的-env-example-文件为-env"><a href="#6-Copy-项目目录下的-env-example-文件为-env" class="headerlink" title="6.Copy 项目目录下的 .env.example 文件为 .env"></a>6.Copy 项目目录下的 .env.example 文件为 .env</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp .env.example .env</span><br></pre></td></tr></table></figure>
-<h3 id="7-设置应用程序密钥"><a href="#7-设置应用程序密钥" class="headerlink" title="7.设置应用程序密钥"></a>7.设置应用程序密钥</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在你安装完 Laravel 后，首先需要做的事情是设置一个随机字符串的密钥。假设你是通过 Composer 或是 Laravel 安装工具安装的 Laravel，那么这个密钥已经通过 key:generate 命令帮你设置完成。通常这个密钥会有 32 字符长。这个密钥可以被设置在 .env 环境文件中。如果你还没将 .env.example 文件重命名为 .env，那么你现在应该去设置下。</span><br><span class="line">如果应用程序密钥没有被设置的话，你的用户 Session 和其它的加密数据都是不安全的！</span><br><span class="line">命令：php artisan key:generate</span><br></pre></td></tr></table></figure>
-<h3 id="8-Nginx-配置规则"><a href="#8-Nginx-配置规则" class="headerlink" title="8.Nginx 配置规则"></a>8.Nginx 配置规则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">server</span><br><span class="line">&#123;</span><br><span class="line">    # 端口  80 小端口需要 root 启动 Nginx ，大端口 如 8080 不需要 root</span><br><span class="line">    listen          80;</span><br><span class="line">    # host  域名</span><br><span class="line">    server_name     admin.cloud.51idc.com;</span><br><span class="line">    # 目录 (注意：是项目目录下的 public 目录)</span><br><span class="line">    root            /Users/eagle/workspace/ xx/public;</span><br><span class="line">    index           index.php;</span><br><span class="line">    # 伪静态规则（必须含有）</span><br><span class="line">    try_files       $uri /index.php$is_args$query_string;</span><br><span class="line">    location ~ \.php$ &#123;</span><br><span class="line">        try_files                   $uri = 404;</span><br><span class="line">        fastcgi_split_path_info     ^(.+\.php)(/.+)$;</span><br><span class="line">        fastcgi_connect_timeout     30s;</span><br><span class="line">        fastcgi_read_timeout        100s;</span><br><span class="line">        fastcgi_pass                127.0.0.1:9000;</span><br><span class="line">        fastcgi_param               SCRIPT_FILENAME  $document_root$fastcgi_script_name;</span><br><span class="line">        fastcgi_param               SCRIPT_NAME $fastcgi_script_name;</span><br><span class="line">        include                     fastcgi_params;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="9-启动-Nginx-或者-重启-Nginx"><a href="#9-启动-Nginx-或者-重启-Nginx" class="headerlink" title="9.启动 Nginx 或者 重启 Nginx"></a>9.启动 Nginx 或者 重启 Nginx</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx -s reload</span><br><span class="line">or</span><br><span class="line">brew services start nginx</span><br><span class="line">or</span><br><span class="line">brew services restart nginx</span><br></pre></td></tr></table></figure>
-<h3 id="10-修改hosts"><a href="#10-修改hosts" class="headerlink" title="10.修改hosts"></a>10.修改hosts</h3><h3 id="11-浏览域名"><a href="#11-浏览域名" class="headerlink" title="11.浏览域名"></a>11.浏览域名</h3><h3 id="12-模板使用说明"><a href="#12-模板使用说明" class="headerlink" title="12.模板使用说明"></a>12.<a href="http://laravelacademy.org/post/5919.html" target="_blank" rel="noopener">模板使用说明</a></h3><h3 id="13-视图调用方法"><a href="#13-视图调用方法" class="headerlink" title="13.视图调用方法"></a>13.<a href="http://laravelacademy.org/post/5908.html" target="_blank" rel="noopener">视图调用方法</a></h3><h3 id="14-安装说明"><a href="#14-安装说明" class="headerlink" title="14.安装说明"></a>14.<a href="http://laravelacademy.org/post/5744.html" target="_blank" rel="noopener">安装说明</a></h3><h3 id="15-安装问题说明"><a href="#15-安装问题说明" class="headerlink" title="15.安装问题说明"></a>15.安装问题说明</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cross-env: command not found</span><br><span class="line">解决方案：</span><br><span class="line">cross-env是跨平台的环境变量，需要安装这个环境</span><br><span class="line">npm install cross-env --save-dev</span><br></pre></td></tr></table></figure>
-<h3 id="16配置出现问题"><a href="#16配置出现问题" class="headerlink" title="16配置出现问题"></a>16配置出现问题</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.events.js:160</span><br><span class="line">      throw er; // Unhandled 'error' event</span><br><span class="line">      ^</span><br><span class="line"></span><br><span class="line">Error: spawn node_modules/webpack/bin/webpack.js ENOENT</span><br><span class="line">    at exports._errnoException (util.js:1026:11)</span><br><span class="line">    解决方案：</span><br><span class="line">    rm -rf node_modules</span><br><span class="line">    rm package-lock.json</span><br><span class="line">    cnpm cache clear --force</span><br><span class="line">    cnpm install</span><br></pre></td></tr></table></figure>
-
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
-      <a href="/2017/06/07/vue/">
-  <time datetime="2017-06-07T03:57:00.000Z">
-    2017-06-07
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2017/06/07/vue/">vue</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <p>有关vue的一些语法</p>
-<h2 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h2><h4 id="v-bind缩写"><a href="#v-bind缩写" class="headerlink" title="v-bind缩写"></a>v-bind缩写</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 完整语法 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">"url"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 缩写 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">"url"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 完整语法 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-bind:disabled</span>=<span class="string">"someDynamicCondition"</span>&gt;</span>Button<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 缩写 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">:disabled</span>=<span class="string">"someDynamicCondition"</span>&gt;</span>Button<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="v-on缩写"><a href="#v-on缩写" class="headerlink" title="v-on缩写"></a>v-on缩写</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 完整语法 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click</span>=<span class="string">"doSomething"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 缩写 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> @<span class="attr">click</span>=<span class="string">"doSomething"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="组件通信"><a href="#组件通信" class="headerlink" title="组件通信"></a>组件通信</h2><h4 id="父组件通信子组件"><a href="#父组件通信子组件" class="headerlink" title="父组件通信子组件"></a>父组件通信子组件</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">父组件</span><br><span class="line"><span class="tag">&lt;<span class="name">radios</span> <span class="attr">:radiosData</span>=<span class="string">"radiosData"</span> /&gt;</span></span><br><span class="line">export default &#123;</span><br><span class="line">  components: &#123;</span><br><span class="line">    About,</span><br><span class="line">    Radios</span><br><span class="line">  &#125;,</span><br><span class="line">  name: 'hello',</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      msg: 'Welcome to Your Vue.js App',</span><br><span class="line">      radiosData: [</span><br><span class="line">        &#123;'id': 'man', 'text': '男'&#125;,</span><br><span class="line">        &#123;'id': 'woman', 'text': '女'&#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    showChild: function (data) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">子组件</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  export default &#123;</span></span><br><span class="line"><span class="undefined">    props: ['radiosData', 'defaultID'],</span></span><br><span class="line"><span class="undefined">    data: function () &#123;</span></span><br><span class="line"><span class="undefined">      return &#123;</span></span><br><span class="line"><span class="undefined">        checkClass: 'check',</span></span><br><span class="line"><span class="undefined">        checkedClass: 'checked',</span></span><br><span class="line"><span class="undefined">        id: this.defaultID</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    &#125;,</span></span><br><span class="line"><span class="undefined">    methods: &#123;</span></span><br><span class="line"><span class="undefined">      onRadioClick: function (item) &#123;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="子组件通信父组件"><a href="#子组件通信父组件" class="headerlink" title="子组件通信父组件"></a>子组件通信父组件</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">子组件：</span><br><span class="line">methods: &#123;</span><br><span class="line">      onRadioClick: function (item) &#123;</span><br><span class="line">        this.id = item</span><br><span class="line">        this.$emit('listenToChildEvent', this.id)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">父组件：</span><br><span class="line"><span class="tag">&lt;<span class="name">radios</span> <span class="attr">:radiosData</span>=<span class="string">"radiosData"</span> <span class="attr">defaultID</span>=<span class="string">'man'</span> <span class="attr">v-on:listenToChildEvent</span>=<span class="string">"showChild"</span>/&gt;</span></span><br><span class="line">methods: &#123;</span><br><span class="line">    showChild: function (data) &#123;</span><br><span class="line">      console.log(11)</span><br><span class="line">      console.log(data)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
-      <a href="/2017/03/22/git/">
-  <time datetime="2017-03-22T07:11:35.000Z">
-    2017-03-22
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2017/03/22/git/">git</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <h3 id="一、本地项目放入github（https）"><a href="#一、本地项目放入github（https）" class="headerlink" title="一、本地项目放入github（https）"></a>一、本地项目放入github（https）</h3><h6 id="1-登录github，创建一个仓库，复制仓库地址-打开命令行终端，进入项目所在的本地目录，将目录初始化为一个-Git-项目"><a href="#1-登录github，创建一个仓库，复制仓库地址-打开命令行终端，进入项目所在的本地目录，将目录初始化为一个-Git-项目" class="headerlink" title="1. 登录github，创建一个仓库，复制仓库地址,打开命令行终端，进入项目所在的本地目录，将目录初始化为一个 Git 项目"></a>1. 登录github，创建一个仓库，复制仓库地址,打开命令行终端，进入项目所在的本地目录，将目录初始化为一个 Git 项目</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-<h6 id="2-将代码放入git-暂存区"><a href="#2-将代码放入git-暂存区" class="headerlink" title="2. 将代码放入git 暂存区"></a>2. 将代码放入git 暂存区</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
-<h6 id="3-讲代码提交到工作区"><a href="#3-讲代码提交到工作区" class="headerlink" title="3. 讲代码提交到工作区"></a>3. 讲代码提交到工作区</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git ci -m &quot;commit&quot;</span><br></pre></td></tr></table></figure>
-<h6 id="4-回到命令行终端界面，将本地仓库关联到远程仓库"><a href="#4-回到命令行终端界面，将本地仓库关联到远程仓库" class="headerlink" title="4. 回到命令行终端界面，将本地仓库关联到远程仓库"></a>4. 回到命令行终端界面，将本地仓库关联到远程仓库</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/superRaytin/alipay-app-ui.git</span><br></pre></td></tr></table></figure>
-<h6 id="5-提交代码到-GitHub-仓库"><a href="#5-提交代码到-GitHub-仓库" class="headerlink" title="5. 提交代码到 GitHub 仓库"></a>5. 提交代码到 GitHub 仓库</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-<h3 id="git-reset-和git-git-revert的区别"><a href="#git-reset-和git-git-revert的区别" class="headerlink" title="git reset 和git git revert的区别"></a>git reset 和git git revert的区别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reset a-&gt;b-&gt;c ,想去掉c的commit，git reset 到b的commit，--hard不保留修改到工作区。</span><br><span class="line">git revert a-&gt;b-&gt;c,想去掉B，把B的commitID revert，这样就把B的+-改为-+，恢复到修改之前。</span><br><span class="line">git cherry-pick commitID，把某一次提交拿到该分支里面，commitID是针对git 全局，和某个分支无关。</span><br></pre></td></tr></table></figure>
-
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
-      <a href="/2017/03/16/layout/">
-  <time datetime="2017-03-16T06:32:11.000Z">
-    2017-03-16
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2017/03/16/layout/">layout</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <p>有关布局的一些demo</p>
-<h3 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h3><p><a href="https://jsfiddle.net/" target="_blank" rel="noopener">在线调试环境</a></p>
-<h4 id="容器内左右布局（换行时，不用限制高度）"><a href="#容器内左右布局（换行时，不用限制高度）" class="headerlink" title="容器内左右布局（换行时，不用限制高度）"></a>容器内左右布局（换行时，不用限制高度）</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">1100px</span>; </span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid red; </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.main</span> <span class="selector-tag">div</span> &#123; </span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">95px</span>;</span><br><span class="line">    <span class="attribute">padding-bottom</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">label</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">85px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">95px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    <span class="attribute">text-align</span>: right;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">     <span class="attribute">padding-left</span>: <span class="number">30px</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span>&gt;</span>云硬盘名称<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"text"</span>&gt;</span>所以，我们所以，我们所以，我们所以，我们所以，我们所以，我们所以，我们我们所以，我们所以，我们所以，我们所以，我们我们所以，我们所以，我们所以，我们所以，我们我们所以，我们所以，我们所以，我们所以，我们我们所以，我们所以，我们所以，我们所以，我们<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span>&gt;</span>购买数量<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"text"</span>&gt;</span>所以，我们所以，我们所以，我们所以，我们所以，我们所以，我们所以，我们<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span>&gt;</span>类型<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"text"</span>&gt;</span>所以，我们所以，我们所以，我们所以，我们所以，我们所以，我们所以，我们<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="React-和普通js相比，优点在哪里"><a href="#React-和普通js相比，优点在哪里" class="headerlink" title="React 和普通js相比，优点在哪里"></a>React 和普通js相比，优点在哪里</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 前端界面是由组件和数据渲染组成的，组件固定，根据数据渲染可以减少dom的操作。React可以组件化管理，组件的相互嵌套。而普通的js的实现就会比较复杂。比如组件的相互嵌套就很难实现。</span><br><span class="line">2. 事件绑定，针对某个组件特定的事件绑定，普通js容易造成全局绑定，或者影响到其他地方，有隐患。而React，可以很好的规避到这一点。</span><br><span class="line">3. 方便测试。</span><br></pre></td></tr></table></figure>
-
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
-      <a href="/2017/03/15/css/">
-  <time datetime="2017-03-15T03:32:14.000Z">
-    2017-03-15
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2017/03/15/css/">css3</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <p>有关css3的一些demo</p>
-<h3 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h3><h4 id="1-map-site（地图节点）在线调试环境"><a href="#1-map-site（地图节点）在线调试环境" class="headerlink" title="1.map site（地图节点）在线调试环境"></a>1.map site（地图节点）<a href="https://jsfiddle.net/lemon_yw/pydoxmyz/" target="_blank" rel="noopener">在线调试环境</a></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">keyframes</span> map-pulse &#123; </span><br><span class="line">    0% &#123;</span><br><span class="line">        <span class="attribute">opacity</span>: .<span class="number">85</span>; </span><br><span class="line">        <span class="attribute">filter</span>: <span class="built_in">alpha</span>(opacity= 85);</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">scale</span>(0); </span><br><span class="line">    &#125; </span><br><span class="line">    100% &#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">        <span class="attribute">filter</span>: <span class="built_in">alpha</span>(opacity= 0);</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">scale</span>(1); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="2-鼠标hover（边框向两边展开）在线调试环境"><a href="#2-鼠标hover（边框向两边展开）在线调试环境" class="headerlink" title="2.鼠标hover（边框向两边展开）在线调试环境"></a>2.鼠标hover（边框向两边展开）<a href="https://jsfiddle.net/lemon_yw/9sqmh7so/" target="_blank" rel="noopener">在线调试环境</a></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.button</span> <span class="selector-class">.check</span> &#123;</span><br><span class="line">   <span class="attribute">position</span>: absolute;</span><br><span class="line">   <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">   <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">   <span class="attribute">margin-left</span>: -<span class="number">50%</span>;</span><br><span class="line">   <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">   <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">   <span class="attribute">border-top</span>: <span class="number">1px</span> solid red;</span><br><span class="line">   <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid red;</span><br><span class="line">   <span class="attribute">transform-origin</span>: <span class="number">0</span>;</span><br><span class="line">   <span class="attribute">transform</span>: <span class="built_in">scaleX</span>(2);</span><br><span class="line">   <span class="attribute">transition</span>: <span class="number">0.3S</span> ease-in-out</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="3-消息框（下方三角形带背景和边框）在线调试环境"><a href="#3-消息框（下方三角形带背景和边框）在线调试环境" class="headerlink" title="3.消息框（下方三角形带背景和边框）在线调试环境"></a>3.消息框（下方三角形带背景和边框）<a href="https://jsfiddle.net/lemon_yw/t1bk9zvg/" target="_blank" rel="noopener">在线调试环境</a></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.triangle</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>:absolute;</span><br><span class="line">  <span class="attribute">left</span>:<span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">margin-left</span>:-<span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">0px</span>;</span><br><span class="line">  <span class="attribute">height</span>:<span class="number">0px</span>;</span><br><span class="line">  <span class="attribute">border-width</span>:<span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">border-style</span>:solid dashed dashed dashed</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.border</span> &#123;</span><br><span class="line">  <span class="attribute">border-color</span>:<span class="number">#C6CCDC</span> transparent  transparent transparent;</span><br><span class="line">  <span class="attribute">bottom</span>: -<span class="number">20px</span>;  </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bg</span> &#123;</span><br><span class="line">  <span class="attribute">border-color</span>:<span class="number">#fff</span> transparent  transparent transparent;</span><br><span class="line">  <span class="attribute">bottom</span>: -<span class="number">19px</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="4-图片hover效果（边框显示-amp-消失）在线调试环境"><a href="#4-图片hover效果（边框显示-amp-消失）在线调试环境" class="headerlink" title="4. 图片hover效果（边框显示&amp;消失）在线调试环境"></a>4. 图片hover效果（边框显示&amp;消失）<a href="https://jsfiddle.net/lemon_yw/18c6pcnz/" target="_blank" rel="noopener">在线调试环境</a></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"> <span class="selector-class">.main</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">background-color</span>: gray;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">250px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">250px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.border</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.border</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">1px</span> solid red;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid red;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(0,1);</span><br><span class="line">    <span class="attribute">transition</span>: opacity <span class="number">0.35s</span>, transform <span class="number">0.35s</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.border</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">1px</span> solid red;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">1px</span> solid red;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(1,0);</span><br><span class="line">    <span class="attribute">transition</span>: opacity <span class="number">0.35s</span>, transform <span class="number">0.35s</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.main</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.border</span><span class="selector-pseudo">:before</span> ,  <span class="selector-class">.main</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.border</span><span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="5-图片hover效果-局部放大效果"><a href="#5-图片hover效果-局部放大效果" class="headerlink" title="5.图片hover效果-局部放大效果"></a>5.图片hover效果-局部放大效果</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">250px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">250px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid red;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="selector-class">.main</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">calc</span>(100% + 10px);</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">transition</span>: opacity <span class="number">0.35s</span>, transform <span class="number">0.35s</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate3d</span>(-30px,0,0) <span class="built_in">scale</span>(1.12);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="selector-class">.main</span><span class="selector-pseudo">:hover</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0.5</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate3d</span>(0,0,0) <span class="built_in">scale</span>(1)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-
-  <nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
 </nav>
 
-</div>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/26/html-meta/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/26/html-meta/" itemprop="url">html_meta</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-26T14:02:31+08:00">
+                2017-09-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          有关HTML标签的使用meta http-equiv大全12345678910推荐使用：&lt;meta charset="utf-8"/&gt;&lt;meta name="renderer" content="webkit"/&gt;&lt;meta http-equiv="X-UA-Compa
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/26/html-meta/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
-  <footer id="footer"><div class="copyright">
   
-  &copy; 2017 <a href="/">John Doe</a>
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/26/laravel/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/26/laravel/" itemprop="url">laravel</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-26T10:55:15+08:00">
+                2017-09-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          有关mac laravel项目的搭建
+1.服务器环境123456PHP &gt;= 7.0.0PHP OpenSSL 扩展PHP PDO 扩展PHP Mbstring 扩展PHP Tokenizer 扩展PHP XML 扩展
+2.环境安装1234567891011安装依赖 PHP7     brew
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/26/laravel/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/07/vue/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/07/vue/" itemprop="url">vue</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-07T11:57:00+08:00">
+                2017-06-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          有关vue的一些语法
+缩写v-bind缩写12345678&lt;!-- 完整语法 --&gt;&lt;a v-bind:href="url"&gt;&lt;/a&gt;&lt;!-- 缩写 --&gt;&lt;a :href="url"&gt;&lt;/a&gt;&lt;!-- 完整语法 --&g
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/07/vue/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/22/git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/22/git/" itemprop="url">git</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-22T15:11:35+08:00">
+                2017-03-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          一、本地项目放入github（https）1. 登录github，创建一个仓库，复制仓库地址,打开命令行终端，进入项目所在的本地目录，将目录初始化为一个 Git 项目1git init
+2. 将代码放入git 暂存区1git add .
+3. 讲代码提交到工作区1git ci -m &quot;co
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/22/git/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/layout/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/16/layout/" itemprop="url">layout</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-16T14:32:11+08:00">
+                2017-03-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          有关布局的一些demo
+demo在线调试环境
+容器内左右布局（换行时，不用限制高度）1234567891011121314151617181920.main &#123;    display: inline-block;    width: 1100px;     border:1px solid
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/16/layout/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/15/css/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/15/css/" itemprop="url">css3</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-15T11:32:14+08:00">
+                2017-03-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          有关css3的一些demo
+demo1.map site（地图节点）在线调试环境123456789101112@keyframes map-pulse &#123;     0% &#123;        opacity: .85;         filter: alpha(opacity= 8
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/15/css/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Lemon" />
+            
+              <p class="site-author-name" itemprop="name">Lemon</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lemon</span>
+
   
 </div>
-<div class="theme-copyright">
-  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
-   | 
-  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
-</div>
-<div class="clearfix"></div></footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-<script src="/js/scale.fix.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
 
 
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
 <script type="text/javascript">
-  (function($){
-    $('.fancybox').fancybox();
-  })(jQuery);
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
 
 </body>
 </html>
