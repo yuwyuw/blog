@@ -1,5 +1,5 @@
 ---
-title: laravel
+title: laravel框架使用指南
 date: 2017-09-26 10:55:15
 tags:
 author: lemon
