@@ -2,6 +2,7 @@
 title: vue
 date: 2017-06-07 11:57:00
 tags:
+author: lemon
 ---
 有关vue的一些语法
 ## 缩写
