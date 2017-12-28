@@ -4,8 +4,6 @@ date: 2017-06-07 11:57:00
 tags:
 author: lemon
 ---
-有关vue的一些语法
-## 缩写
 #### v-bind缩写
 ```html
 <!-- 完整语法 -->
@@ -24,12 +22,11 @@ author: lemon
 <!-- 缩写 -->
 <a @click="doSomething"></a>
 ```
-## 组件通信
 #### 父组件通信子组件
 
 ```html
-父组件
-<radios :radiosData="radiosData" />
+<!-- 父组件 -->
+<!-- <radios :radiosData="radiosData" /> -->
 export default {
   components: {
     About,
@@ -52,7 +49,7 @@ export default {
 }
 ```
 ```html
-子组件
+<!-- 子组件 -->
 <script>
   export default {
     props: ['radiosData', 'defaultID'],
@@ -72,7 +69,7 @@ export default {
 ```
 #### 子组件通信父组件
 ```html
-子组件：
+<!-- 子组件： -->
 methods: {
       onRadioClick: function (item) {
         this.id = item
@@ -81,8 +78,8 @@ methods: {
     }
 ```
 ```html
-父组件：
-<radios :radiosData="radiosData" defaultID='man' v-on:listenToChildEvent="showChild"/>
+<!-- 父组件： -->
+<!-- <radios :radiosData="radiosData" defaultID='man' v-on:listenToChildEvent="showChild"/> -->
 methods: {
     showChild: function (data) {
       console.log(11)
