@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="有关mac laravel项目的搭建服务器环境123456PHP &amp;gt;= 7.0.0PHP OpenSSL 扩展PHP PDO 扩展PHP Mbstring 扩展PHP Tokenizer 扩展PHP XML 扩展 环境安装1234567891011&amp;lt;!-- 安装依赖 PHP7 --&amp;gt;     brew tap homebrew/php（如能搜到php71可忽略）     brew">
+<meta name="description" content="有关laravel操作说明">
 <meta property="og:type" content="article">
 <meta property="og:title" content="laravel框架使用指南">
 <meta property="og:url" content="http://yoursite.com/2017/09/26/laravel/index.html">
 <meta property="og:site_name" content="Lemon&#39;s Blog">
-<meta property="og:description" content="有关mac laravel项目的搭建服务器环境123456PHP &amp;gt;= 7.0.0PHP OpenSSL 扩展PHP PDO 扩展PHP Mbstring 扩展PHP Tokenizer 扩展PHP XML 扩展 环境安装1234567891011&amp;lt;!-- 安装依赖 PHP7 --&amp;gt;     brew tap homebrew/php（如能搜到php71可忽略）     brew">
+<meta property="og:description" content="有关laravel操作说明">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-28T05:37:00.000Z">
+<meta property="og:updated_time" content="2017-12-28T06:07:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="laravel框架使用指南">
-<meta name="twitter:description" content="有关mac laravel项目的搭建服务器环境123456PHP &amp;gt;= 7.0.0PHP OpenSSL 扩展PHP PDO 扩展PHP Mbstring 扩展PHP Tokenizer 扩展PHP XML 扩展 环境安装1234567891011&amp;lt;!-- 安装依赖 PHP7 --&amp;gt;     brew tap homebrew/php（如能搜到php71可忽略）     brew">
+<meta name="twitter:description" content="有关laravel操作说明">
 
 
 
@@ -319,7 +319,8 @@
       
 
       
-        <h4 id="有关mac-laravel项目的搭建"><a href="#有关mac-laravel项目的搭建" class="headerlink" title="有关mac laravel项目的搭建"></a>有关mac laravel项目的搭建</h4><h6 id="服务器环境"><a href="#服务器环境" class="headerlink" title="服务器环境"></a>服务器环境</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PHP &gt;= 7.0.0</span><br><span class="line">PHP OpenSSL 扩展</span><br><span class="line">PHP PDO 扩展</span><br><span class="line">PHP Mbstring 扩展</span><br><span class="line">PHP Tokenizer 扩展</span><br><span class="line">PHP XML 扩展</span><br></pre></td></tr></table></figure>
+        <p>有关laravel操作说明<br><a id="more"></a></p>
+<h4 id="有关mac-laravel项目的搭建"><a href="#有关mac-laravel项目的搭建" class="headerlink" title="有关mac laravel项目的搭建"></a>有关mac laravel项目的搭建</h4><h6 id="服务器环境"><a href="#服务器环境" class="headerlink" title="服务器环境"></a>服务器环境</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PHP &gt;= 7.0.0</span><br><span class="line">PHP OpenSSL 扩展</span><br><span class="line">PHP PDO 扩展</span><br><span class="line">PHP Mbstring 扩展</span><br><span class="line">PHP Tokenizer 扩展</span><br><span class="line">PHP XML 扩展</span><br></pre></td></tr></table></figure>
 <h6 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 安装依赖 PHP7 --&gt;</span></span><br><span class="line">     brew tap homebrew/php（如能搜到php71可忽略）</span><br><span class="line">     brew install  php71  php71-mcrypt</span><br><span class="line">     brew link php71 （设置当前环境所有 php 使用 php7）</span><br><span class="line"> </span><br><span class="line"><span class="comment">&lt;!-- 启动 PHP-FPM --&gt;</span></span><br><span class="line">     brew services start php71</span><br><span class="line"><span class="comment">&lt;!-- 安装 Nginx --&gt;</span></span><br><span class="line">     brew  install nginx  （已有忽略）</span><br><span class="line"><span class="comment">&lt;!-- 安装 Composer (依赖包管理器) --&gt;</span></span><br><span class="line">     brew install composer</span><br></pre></td></tr></table></figure>
 <h6 id="安装-Laravel-安装器"><a href="#安装-Laravel-安装器" class="headerlink" title="安装 Laravel 安装器"></a>安装 Laravel 安装器</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer global require "laravel/installer"</span><br></pre></td></tr></table></figure>
 <h6 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH="$HOME/.composer/vendor/bin:$PATH"</span><br></pre></td></tr></table></figure>
