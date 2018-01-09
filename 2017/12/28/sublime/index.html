@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="有关git的一些操作说明">
+<meta name="description" content="Command+D 选中光标所占的文本，继续操作则会选中下一个相同的文本。Command+F 打开底部搜索框，查找关键字。Command+L 选中整行，继续操作则继续选择下一行，效果和 Shift+↓ 效果一样。Command+Shift+D 复制光标所在整行，插入到下一行。Control+B 等号对齐。（此快捷键是基于sublime的插件Alignment实现）Control+Shift+M">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git随笔">
-<meta property="og:url" content="http://yoursite.com/2017/03/22/git/index.html">
+<meta property="og:title" content="常用Sublime高效快捷键汇集">
+<meta property="og:url" content="http://yoursite.com/2017/12/28/sublime/index.html">
 <meta property="og:site_name" content="Lemon&#39;s Blog">
-<meta property="og:description" content="有关git的一些操作说明">
+<meta property="og:description" content="Command+D 选中光标所占的文本，继续操作则会选中下一个相同的文本。Command+F 打开底部搜索框，查找关键字。Command+L 选中整行，继续操作则继续选择下一行，效果和 Shift+↓ 效果一样。Command+Shift+D 复制光标所在整行，插入到下一行。Control+B 等号对齐。（此快捷键是基于sublime的插件Alignment实现）Control+Shift+M">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-09T06:33:40.000Z">
+<meta property="og:updated_time" content="2018-01-09T06:24:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git随笔">
-<meta name="twitter:description" content="有关git的一些操作说明">
+<meta name="twitter:title" content="常用Sublime高效快捷键汇集">
+<meta name="twitter:description" content="Command+D 选中光标所占的文本，继续操作则会选中下一个相同的文本。Command+F 打开底部搜索框，查找关键字。Command+L 选中整行，继续操作则继续选择下一行，效果和 Shift+↓ 效果一样。Command+Shift+D 复制光标所在整行，插入到下一行。Control+B 等号对齐。（此快捷键是基于sublime的插件Alignment实现）Control+Shift+M">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/22/git/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/28/sublime/"/>
 
 
 
 
 
-  <title>git随笔 | Lemon's Blog</title>
+  <title>常用Sublime高效快捷键汇集 | Lemon's Blog</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/22/git/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/28/sublime/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lemon">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git随笔</h1>
+          <h1 class="post-title" itemprop="name headline">常用Sublime高效快捷键汇集</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-22T15:11:35+08:00">
-                2017-03-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-28T15:47:19+08:00">
+                2017-12-28
               </time>
             
 
@@ -319,13 +319,8 @@
       
 
       
-        <p>有关git的一些操作说明<br><a id="more"></a></p>
-<h6 id="一、本地项目放入github（https）"><a href="#一、本地项目放入github（https）" class="headerlink" title="一、本地项目放入github（https）"></a>一、本地项目放入github（https）</h6><p>登录github，创建一个仓库，复制仓库地址,打开命令行终端，进入项目所在的本地目录，将目录初始化为一个 Git 项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure></p>
-<p>将代码放入git 暂存区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure></p>
-<p>将代码提交到工作区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git ci -m &quot;commit&quot;</span><br></pre></td></tr></table></figure></p>
-<p>回到命令行终端界面，将本地仓库关联到远程仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/superRaytin/alipay-app-ui.git</span><br></pre></td></tr></table></figure></p>
-<p>提交代码到 GitHub 仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure></p>
-<h6 id="二、git-reset-和git-git-revert的区别"><a href="#二、git-reset-和git-git-revert的区别" class="headerlink" title="二、git reset 和git git revert的区别"></a>二、git reset 和git git revert的区别</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reset a-&gt;b-&gt;c ,想去掉c的commit，git reset 到b的commit，--hard不保留修改到工作区。</span><br><span class="line">git revert a-&gt;b-&gt;c,想去掉B，把B的commitID revert，这样就把B的+-改为-+，恢复到修改之前。</span><br><span class="line">git cherry-pick commitID，把某一次提交拿到该分支里面，commitID是针对git 全局，和某个分支无关。</span><br></pre></td></tr></table></figure>
+        <a id="more"></a>
+<p>Command+D 选中光标所占的文本，继续操作则会选中下一个相同的文本。<br>Command+F 打开底部搜索框，查找关键字。<br>Command+L 选中整行，继续操作则继续选择下一行，效果和 Shift+↓ 效果一样。<br>Command+Shift+D 复制光标所在整行，插入到下一行。<br>Control+B 等号对齐。（此快捷键是基于sublime的插件Alignment实现）<br>Control+Shift+M 选择括号内的内容（继续选择父括号）。举个栗子：快速选中删除函数中的代码，重写函数体代码或重写括号内里的内容。</p>
 
       
     </div>
@@ -350,8 +345,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/16/layout/" rel="next" title="常见布局说明">
-                <i class="fa fa-chevron-left"></i> 常见布局说明
+              <a href="/2017/12/28/this/" rel="next" title="对Javascript中this的理解">
+                <i class="fa fa-chevron-left"></i> 对Javascript中this的理解
               </a>
             
           </div>
@@ -359,10 +354,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/07/vue/" rel="prev" title="vue使用指南">
-                vue使用指南 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -414,17 +405,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -472,22 +454,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#一、本地项目放入github（https）"><span class="nav-number">1.</span> <span class="nav-text">一、本地项目放入github（https）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#二、git-reset-和git-git-revert的区别"><span class="nav-number">2.</span> <span class="nav-text">二、git reset 和git git revert的区别</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
