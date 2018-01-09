@@ -4,7 +4,9 @@ date: 2017-03-16 14:32:11
 tags:
 author: lemon
 ---
-#### 容器内左右布局（换行时，不用限制高度）[在线调试环境](https://jsfiddle.net/)
+有关一些常见布局形式
+<!-- more -->
+###### 容器内左右布局（换行时，不用限制高度）[在线调试环境](https://jsfiddle.net/)
 ```css
     .main {
         display: inline-block;

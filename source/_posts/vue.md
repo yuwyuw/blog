@@ -4,6 +4,8 @@ date: 2017-06-07 11:57:00
 tags:
 author: lemon
 ---
+有关vue一些语法
+<!-- more -->
 #### v-bind缩写
 ```html
 <!-- 完整语法 -->

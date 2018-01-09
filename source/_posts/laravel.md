@@ -1,10 +1,11 @@
 ---
-title: laravel框架使用指南
+title: 有关Mac Laravel项目的搭建
 date: 2017-09-26 10:55:15
 tags:
 author: lemon
 ---
-#### 有关mac laravel项目的搭建
+在搭建Laravel项目时，需要安装一些环境，此文记载了一些安装步骤和环境异常的处理。
+<!-- more -->
 ###### 服务器环境
 ```html
 PHP >= 7.0.0

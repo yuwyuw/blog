@@ -1,10 +1,12 @@
 ---
-title: html-meta信息说明
+title: HTML中的meta信息说明
 date: 2017-09-26 14:02:31
 tags:
 author: lemon
 ---
-#### 推荐使用：
+有关HTML中meta标签的常见使用场景以及部分信息的介绍。
+<!-- more -->
+###### 推荐使用：
 ```html
 <meta charset="utf-8"/>
 <meta name="renderer" content="webkit"/>
@@ -16,7 +18,7 @@ author: lemon
 <!-- 说明：指定网页在缓存中的过期时间，一旦网页过期，必须到服务器上重新调阅。 -->
 <meta http-equiv="Expires" content="0" />
 ```
-#### meta renderer
+###### meta renderer
 ```html
 <!-- 我们可以使用标签来指定适合自己网站的渲染内核名称，当双核浏览器访问本网页时，
 就会根据我们的指示，选择我们指定的渲染内核来处理网页。
@@ -30,7 +32,7 @@ author: lemon
 同时我们也可以同时指定多个内核名称，之间以符号”|”进行分隔，如下代码： -->
 <meta name="renderer" content="webkit|ie-comp|ie-stand">
 ```
-#### X-UA-Compatible
+###### X-UA-Compatible
 ```html
 <!-- X-UA-Compatible是针对IE8新加的一个设置，对于IE8之外的浏览器是不识别的，这个区别与content="IE=7"在无论页面是否包含<!DOCTYPE>指令，都像是使用了Windows Internet Explorer 7的标准模式。而content="IE=EmulateIE7"模式遵循<!DOCTYPE>指令。对于多数网站来说，它是首选的兼容性模式。
 为了避免制作出的页面在IE8下面出现错误，建议直接将IE8使用IE7进行渲染。也就是直接在页面的header的meta标签中加入如下代码： -->
@@ -51,5 +53,5 @@ author: lemon
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 <!-- EmulateIE7 模式通知 Windows Internet Explorer 使用 <!DOCTYPE> 指令确定如何呈现内容。标准模式指令以Windows Internet Explorer 7 标准模式显示，而 Quirks 模式指令以 IE5 模式显示。与 IE7 模式不同，EmulateIE7 模式遵循 <!DOCTYPE> 指令。对于多数网站来说，它是首选的兼容性模式。 -->
 ```
-#### [有关HTML<meta>标签的使用](http://www.w3school.com.cn/tags/tag_meta.asp)
-#### [meta http-equiv大全](http://www.cnblogs.com/jerryshi/archive/2008/10/14/1310611.html)
+###### [有关HTML<meta>标签的使用](http://www.w3school.com.cn/tags/tag_meta.asp)
+###### [meta http-equiv大全](http://www.cnblogs.com/jerryshi/archive/2008/10/14/1310611.html)

@@ -4,7 +4,9 @@ date: 2017-03-15 11:32:14
 tags:
 author: lemon
 ---
-#### map site（地图节点）[在线调试环境](https://jsfiddle.net/lemon_yw/pydoxmyz/)```css
+有关css3一些demo样式
+<!-- more -->
+###### map site（地图节点）[在线调试环境](https://jsfiddle.net/lemon_yw/pydoxmyz/)```css
     @keyframes map-pulse { 
         0% {
             opacity: .85; 
@@ -18,7 +20,7 @@ author: lemon
         }
     }
 ```
-#### 鼠标hover（边框向两边展开）[在线调试环境](https://jsfiddle.net/lemon_yw/9sqmh7so/)
+###### 鼠标hover（边框向两边展开）[在线调试环境](https://jsfiddle.net/lemon_yw/9sqmh7so/)
 ```css
     .button .check {
        position: absolute;
@@ -34,7 +36,7 @@ author: lemon
        transition: 0.3S ease-in-out
     }
 ```
-#### 消息框（下方三角形带背景和边框）[在线调试环境](https://jsfiddle.net/lemon_yw/t1bk9zvg/)
+###### 消息框（下方三角形带背景和边框）[在线调试环境](https://jsfiddle.net/lemon_yw/t1bk9zvg/)
 ```css
     .triangle {
       position:absolute;
@@ -54,7 +56,7 @@ author: lemon
       bottom: -19px;  
     }
 ```
-#### 图片hover效果（边框显示&消失）[在线调试环境](https://jsfiddle.net/lemon_yw/18c6pcnz/)
+###### 图片hover效果（边框显示&消失）[在线调试环境](https://jsfiddle.net/lemon_yw/18c6pcnz/)
 ```css
      .main {
         display: inline-block;
@@ -99,7 +101,7 @@ author: lemon
         transform: scale(1);
     } 
 ```
-#### 图片hover效果-局部放大效果
+###### 图片hover效果-局部放大效果
 ```css
     .main {
         display: inline-block;
@@ -120,4 +122,16 @@ author: lemon
         opacity: 0.5;
         transform: translate3d(0,0,0) scale(1)
         }
+```
+###### CSS文字左右两横线效果
+```css
+/*<span class="title1">标题</span>*/
+.title1 {
+  display: inline-block;
+  padding: 0 20px;
+  line-height: 1px;
+  border-left: 100px solid #ccc;
+  border-right: 100px solid #ccc;
+  text-align: center;
+}
 ```
