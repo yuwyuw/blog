@@ -23,44 +23,43 @@ tags:
     function test () {
         alert(this.x)
     }
-    text(); //1
+    test(); //1
 ```
 this代表全局对象，多次申明表示重新定义，请看下面这段代码，它的运行结果是2。
 ```js
     this.x = 1;
-    funtcion text () {
+    funtcion test () {
         this.x = 2;
         alert(this.x);
     }
-    text(); //2
+    test(); //2
 ```
 ######  情况二、作为对象方法的调用
 函数还可以作为某个对象的方法调用，这时this就指这个上级对象。
 ```js
+    this.x = 2;
     function test () {
        alert(this.x); 
     }
     var o = {};
     o.x = 1;
-    o.m = text;
+    o.m = test;
     o.m(); //1
 ```
 ######  情况三、作为构造函数调用
 this指向构造函数，this不再是全局变量
 ```js
     this.x = 2;
-    function text () {
+    function test () {
         this.x = 1;
         alert(this.x) //1
     }
-    let newText = new text();
-    alert(newText.x) //1
+    let newTest = new test();
+    alert(newTest.x) //1
     alert(x) // 2
 ```
 ###### 情况四、使用 Function.prototype 中的三个方法 call(), apply(), bind()
-这三个函数，都可以改变函数的 this 指向到指定的对象，不同之处在于，call() 和 apply() 是立即执行函数，并且接受的参数的形式不同call(this, arg1, arg2, ...)，apply(this, [arg1, arg2, ...])，bind() 则是创建一个新的包装函数，并且返回，而不是立刻执行，bind(this, arg1, arg2, ...)，apply() 接收参数的形式，有助于函数嵌套函数的时候，把 arguments 变量传递到下一层函数中。
-上面代码中， foo() 内部的 this 遵循默认绑定规则，绑定到全局变量中。
-而 bar() 在调用的时候，调用了 apply() 函数，把 this 绑定到了一个新的对象中 {a: 2}，而且原封不动的接收 foo() 接收的函数。
+这三个函数，都可以改变函数的 this 指向到指定的对象，上面代码中， foo() 内部的 this 遵循默认绑定规则，绑定到全局变量中。而 bar() 在调用的时候，调用了 apply() 函数，把 this 绑定到了一个新的对象中 {a: 2}，而且原封不动的接收 foo() 接收的函数。
 ```js
     function foo() {
       console.log(this.a);  // 输出 1
@@ -72,4 +71,21 @@ this指向构造函数，this不再是全局变量
     var a = 1;
     foo(3);
 ```
+bind函数的第一个参数如果为null，this指向全局变量。
+```js
+    this.x = 9; 
+    let module = {
+      x: 81,
+      getX: function() { return this.x; }
+    };
+    module.getX(); // 返回 81
+    let retrieveX = module.getX;
+    retrieveX(); // 返回 9, 在这种情况下，"this"指向全局作用域
+    // 创建一个新函数，将"this"绑定到module对象
+    // 新手可能会被全局的x变量和module里的属性x所迷惑
+    let boundGetX = retrieveX.bind(module);
+    boundGetX(); // 返回 81
+    let reBoundGetX = retrieveX.bind(null,module)
+    boundGetX(); // 返回 9
 
+```
