@@ -79,17 +79,13 @@
 
 
 
-<meta name="description" content="有关git的一些操作说明">
-<meta property="og:type" content="article">
-<meta property="og:title" content="git随笔">
-<meta property="og:url" content="http://yoursite.com/2017/03/22/git/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lemon&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
 <meta property="og:site_name" content="Lemon&#39;s Blog">
-<meta property="og:description" content="有关git的一些操作说明">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-09T06:33:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git随笔">
-<meta name="twitter:description" content="有关git的一些操作说明">
+<meta name="twitter:title" content="Lemon&#39;s Blog">
 
 
 
@@ -119,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/22/git/"/>
+  <link rel="canonical" href="http://yoursite.com/archives/2018/"/>
 
 
 
 
 
-  <title>git随笔 | Lemon's Blog</title>
+  <title>归档 | Lemon's Blog</title>
   
 
 
@@ -144,7 +140,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left page-archive">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -238,151 +234,74 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block archive">
+    <div id="posts" class="posts-collapse">
+      <span class="archive-move-on"></span>
 
-  
+      <span class="archive-page-counter">
+        
+        
+        
+          
+        
+        嗯..! 目前共计 9 篇日志。 继续努力。
+      </span>
 
-  
-  
-  
+      
+
+        
+        
+        
+
+        
+          
+          <div class="collection-title">
+            <h1 class="archive-year" id="archive-year-2018">2018</h1>
+          </div>
+        
+        
+
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/22/git/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lemon">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lemon's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">git随笔</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/2018/01/10/coding/" itemprop="url">
               
-                <span class="post-meta-item-text">发表于</span>
+                <span itemprop="name">你会如何处理这样的需求</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-22T15:11:35+08:00">
-                2017-03-22
-              </time>
-            
+            </a>
+        
+      </h2>
 
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-01-10T14:32:14+08:00"
+              content="2018-01-10" >
+          01-10
+        </time>
+      </div>
 
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>有关git的一些操作说明<br><a id="more"></a></p>
-<h6 id="一、本地项目放入github（https）"><a href="#一、本地项目放入github（https）" class="headerlink" title="一、本地项目放入github（https）"></a>一、本地项目放入github（https）</h6><p>登录github，创建一个仓库，复制仓库地址,打开命令行终端，进入项目所在的本地目录，将目录初始化为一个 Git 项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure></p>
-<p>将代码放入git 暂存区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure></p>
-<p>将代码提交到工作区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git ci -m &quot;commit&quot;</span><br></pre></td></tr></table></figure></p>
-<p>回到命令行终端界面，将本地仓库关联到远程仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/superRaytin/alipay-app-ui.git</span><br></pre></td></tr></table></figure></p>
-<p>提交代码到 GitHub 仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure></p>
-<h6 id="二、git-reset-和git-git-revert的区别"><a href="#二、git-reset-和git-git-revert的区别" class="headerlink" title="二、git reset 和git git revert的区别"></a>二、git reset 和git git revert的区别</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reset a-&gt;b-&gt;c ,想去掉c的commit，git reset 到b的commit，--hard不保留修改到工作区。</span><br><span class="line">git revert a-&gt;b-&gt;c,想去掉B，把B的commitID revert，这样就把B的+-改为-+，恢复到修改之前。</span><br><span class="line">git cherry-pick commitID，把某一次提交拿到该分支里面，commitID是针对git 全局，和某个分支无关。</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/03/16/layout/" rel="next" title="常见布局说明">
-                <i class="fa fa-chevron-left"></i> 常见布局说明
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/07/vue/" rel="prev" title="vue使用指南">
-                vue使用指南 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
 
-    <div class="post-spread">
       
+
     </div>
   </div>
+  
+  
+  
+
+  
+
 
 
           </div>
@@ -390,10 +309,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -414,17 +329,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -472,22 +378,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#一、本地项目放入github（https）"><span class="nav-number">1.</span> <span class="nav-text">一、本地项目放入github（https）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#二、git-reset-和git-git-revert的区别"><span class="nav-number">2.</span> <span class="nav-text">二、git reset 和git git revert的区别</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -610,10 +500,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
-
 
   
 

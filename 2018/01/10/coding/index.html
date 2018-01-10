@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="有关git的一些操作说明">
+<meta name="description" content="当你遇到“函数有一个参数n，返回值是一个数组，数据随机不重复，返回n个整数取值范围是2-32”，你会如何处理。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git随笔">
-<meta property="og:url" content="http://yoursite.com/2017/03/22/git/index.html">
+<meta property="og:title" content="你会如何处理这样的需求">
+<meta property="og:url" content="http://yoursite.com/2018/01/10/coding/index.html">
 <meta property="og:site_name" content="Lemon&#39;s Blog">
-<meta property="og:description" content="有关git的一些操作说明">
+<meta property="og:description" content="当你遇到“函数有一个参数n，返回值是一个数组，数据随机不重复，返回n个整数取值范围是2-32”，你会如何处理。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-09T06:33:40.000Z">
+<meta property="og:updated_time" content="2018-01-10T07:34:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git随笔">
-<meta name="twitter:description" content="有关git的一些操作说明">
+<meta name="twitter:title" content="你会如何处理这样的需求">
+<meta name="twitter:description" content="当你遇到“函数有一个参数n，返回值是一个数组，数据随机不重复，返回n个整数取值范围是2-32”，你会如何处理。">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/22/git/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/10/coding/"/>
 
 
 
 
 
-  <title>git随笔 | Lemon's Blog</title>
+  <title>你会如何处理这样的需求 | Lemon's Blog</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/22/git/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/10/coding/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lemon">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git随笔</h1>
+          <h1 class="post-title" itemprop="name headline">你会如何处理这样的需求</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-22T15:11:35+08:00">
-                2017-03-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-10T14:32:14+08:00">
+                2018-01-10
               </time>
             
 
@@ -319,13 +319,8 @@
       
 
       
-        <p>有关git的一些操作说明<br><a id="more"></a></p>
-<h6 id="一、本地项目放入github（https）"><a href="#一、本地项目放入github（https）" class="headerlink" title="一、本地项目放入github（https）"></a>一、本地项目放入github（https）</h6><p>登录github，创建一个仓库，复制仓库地址,打开命令行终端，进入项目所在的本地目录，将目录初始化为一个 Git 项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure></p>
-<p>将代码放入git 暂存区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure></p>
-<p>将代码提交到工作区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git ci -m &quot;commit&quot;</span><br></pre></td></tr></table></figure></p>
-<p>回到命令行终端界面，将本地仓库关联到远程仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/superRaytin/alipay-app-ui.git</span><br></pre></td></tr></table></figure></p>
-<p>提交代码到 GitHub 仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure></p>
-<h6 id="二、git-reset-和git-git-revert的区别"><a href="#二、git-reset-和git-git-revert的区别" class="headerlink" title="二、git reset 和git git revert的区别"></a>二、git reset 和git git revert的区别</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reset a-&gt;b-&gt;c ,想去掉c的commit，git reset 到b的commit，--hard不保留修改到工作区。</span><br><span class="line">git revert a-&gt;b-&gt;c,想去掉B，把B的commitID revert，这样就把B的+-改为-+，恢复到修改之前。</span><br><span class="line">git cherry-pick commitID，把某一次提交拿到该分支里面，commitID是针对git 全局，和某个分支无关。</span><br></pre></td></tr></table></figure>
+        <p>当你遇到“函数有一个参数n，返回值是一个数组，数据随机不重复，返回n个整数取值范围是2-32”，你会如何处理。<br><a id="more"></a><br>这个题目很简单，却有很多的小细节需要考虑到。<br>1.参数n一定存在嘛？如果不存在会怎样？<br>2.参数n的数据格式一定正确嘛？如果是n是负数、0、浮点数、String类型的数字会怎样？<br>3.有验证返回的数据随机不重复嘛？<br>4.随机数的取值范围是2-32嘛？<br>5.如果修改随机数的取值范围，你的函数需要大幅度修改嘛？<br>以下是我的代码<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">random</span> (<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> numberlist = [],min = <span class="number">2</span>, max = <span class="number">32</span>;</span><br><span class="line">  <span class="keyword">if</span> (!checkParameter(n)) <span class="keyword">return</span> numberlist;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> random = getRand(min,max)</span><br><span class="line">    checkInArr(numberlist,random) ? i-- : numberlist.push(random);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> numberlist;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkParameter</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> boolean  = !! (n &amp;&amp; <span class="keyword">typeof</span> <span class="built_in">Number</span>(n) === <span class="string">'number'</span>)</span><br><span class="line">  <span class="keyword">return</span> boolean</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRand</span> (<span class="params">min,max</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*(max-min+<span class="number">1</span>)+min);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkInArr</span> (<span class="params">arr, random</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arr.includes(random)</span><br><span class="line">&#125;</span><br><span class="line">random(<span class="number">6</span>);</span><br></pre></td></tr></table></figure></p>
+<p>其实写代码本身是简单的，但是涉及以下几个方面，可能就没有那么简单了。<br>「安全」指代码执行性，我们写出的代码首先需要保证可以执行，一旦缺少这个前提，其他都是无用功。<br>「可用」指满足需求性，我们写出的代码需要满足需求，这样才是一段及格的代码。<br>「健壮」指处理多元性，我们写代码的时候需要去处理不同的场景，如兼容处理、边界处理、用户验证处理、异常处理、隐藏逻辑处理等。<br>「宽容」指角色包容性，我们写代码需要对需求宽容、对用户宽容、对维护者宽容、对调用者宽容。<br>若我们能做到这些，才是一名有钱途的开发者。</p>
 
       
     </div>
@@ -350,8 +345,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/16/layout/" rel="next" title="常见布局说明">
-                <i class="fa fa-chevron-left"></i> 常见布局说明
+              <a href="/2017/12/28/sublime/" rel="next" title="常用Sublime高效快捷键汇集">
+                <i class="fa fa-chevron-left"></i> 常用Sublime高效快捷键汇集
               </a>
             
           </div>
@@ -359,10 +354,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/07/vue/" rel="prev" title="vue使用指南">
-                vue使用指南 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -414,17 +405,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -472,22 +454,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#一、本地项目放入github（https）"><span class="nav-number">1.</span> <span class="nav-text">一、本地项目放入github（https）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#二、git-reset-和git-git-revert的区别"><span class="nav-number">2.</span> <span class="nav-text">二、git reset 和git git revert的区别</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
