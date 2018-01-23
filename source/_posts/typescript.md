@@ -189,3 +189,16 @@ trim_trailing_whitespace = true
 ```
 npm start
 ```
+###### TypeScript+React
+1.安装React依赖
+```
+npm install -g create-react-app
+```
+2.创建一个名为「react_typescript」的项目
+```
+create-react-app react_typescript --scripts-version=react-scripts-ts
+```
+3.执行npm start
+```
+npm start
+```
