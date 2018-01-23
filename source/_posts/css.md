@@ -6,7 +6,8 @@ author: lemon
 ---
 有关css3一些demo样式
 <!-- more -->
-###### map site（地图节点）[在线调试环境](https://jsfiddle.net/lemon_yw/pydoxmyz/)```css
+###### [map site（地图节点）](https://jsfiddle.net/lemon_yw/pydoxmyz/)
+```css
     @keyframes map-pulse { 
         0% {
             opacity: .85; 
@@ -20,7 +21,7 @@ author: lemon
         }
     }
 ```
-###### 鼠标hover（边框向两边展开）[在线调试环境](https://jsfiddle.net/lemon_yw/9sqmh7so/)
+###### [鼠标hover（边框向两边展开）](https://jsfiddle.net/lemon_yw/9sqmh7so/)
 ```css
     .button .check {
        position: absolute;
@@ -36,7 +37,7 @@ author: lemon
        transition: 0.3S ease-in-out
     }
 ```
-###### 消息框（下方三角形带背景和边框）[在线调试环境](https://jsfiddle.net/lemon_yw/t1bk9zvg/)
+###### [消息框（下方三角形带背景和边框）](https://jsfiddle.net/lemon_yw/t1bk9zvg/)
 ```css
     .triangle {
       position:absolute;
@@ -56,7 +57,7 @@ author: lemon
       bottom: -19px;  
     }
 ```
-###### 图片hover效果（边框显示&消失）[在线调试环境](https://jsfiddle.net/lemon_yw/18c6pcnz/)
+###### [图片hover效果（边框显示&消失）](https://jsfiddle.net/lemon_yw/18c6pcnz/)
 ```css
      .main {
         display: inline-block;
@@ -123,10 +124,10 @@ author: lemon
         transform: translate3d(0,0,0) scale(1)
         }
 ```
-###### CSS文字左右两横线效果
+###### [CSS文字左右两横线效果](https://jsfiddle.net/lemon_yw/a0wprd6e/)
 ```css
-/*<span class="title1">标题</span>*/
-.title1 {
+/*<span class="title">标题</span>*/
+.title {
   display: inline-block;
   padding: 0 20px;
   line-height: 1px;
@@ -134,4 +135,33 @@ author: lemon
   border-right: 100px solid #ccc;
   text-align: center;
 }
+```
+###### [鼠标滑动，从底部开始切换显示](https://jsfiddle.net/lemon_yw/eekdq36p/)
+```html
+  <div class="item">
+    <div class="item-default">
+      <span class="item-title">标题</span>
+    </div>
+    <div class="item-active">
+      <span class="item-title">标题</span>
+    </div>
+  </div>
+```
+```css
+  .item .item-title {
+    position: absolute;
+    bottom: 170px; /*因为容器从bottom开始，所以这里也需要从bottom开始计算*/
+    left: 0px;
+    width: 100%;
+  }
+  .item .item-active {
+    position: absolute;
+    bottom: 0px; /*想要从底部开始切换，所以要这些需要写成bottom: 0px;而不是top: 0px;*/
+    left: 0px;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    background-color: #198DC8;
+    transition: height 0.3s;
+  }
 ```
