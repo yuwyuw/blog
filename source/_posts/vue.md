@@ -4,8 +4,21 @@ date: 2017-06-07 11:57:00
 tags:
 author: lemon
 ---
-有关vue一些语法
+有关vue环境的搭建以及一些使用技巧
 <!-- more -->
+###### 搭建一个vue的开发环境
+```code
+# 最新稳定版
+$ npm install vue
+# 全局安装 vue-cli
+$ npm install --global vue-cli
+# 创建一个基于 webpack 模板的新项目
+$ vue init webpack my-project
+# 安装依赖，走你
+$ cd my-project
+$ npm install
+$ npm run dev
+```
 #### v-bind缩写
 ```html
 <!-- 完整语法 -->
