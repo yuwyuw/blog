@@ -249,6 +249,141 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/22/git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/22/git/" itemprop="url">git随笔</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表时间：</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-22T15:11:35+08:00">
+                2017-03-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/03/22/git/" class="leancloud_visitors" data-flag-title="git随笔">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>有关git的一些操作说明<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/22/git/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/layout/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -278,7 +413,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">发表时间：</span>
               
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-16T14:32:11+08:00">
                 2017-03-16
@@ -413,7 +548,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">发表时间：</span>
               
               <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-15T11:32:14+08:00">
                 2017-03-15
@@ -560,7 +695,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -936,13 +1071,13 @@ function showTime(Counter) {
     query.find({
       success: function(results) {
         if (results.length == 0) {
-          var content = '0 ' + $(document.getElementById(url)).text();
+          var content = $(document.getElementById(url)).text() + ': 0';
           $(document.getElementById(url)).text(content);
           return;
         }
         for (var i = 0; i < results.length; i++) {
           var object = results[i];
-          var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+          var content = $(document.getElementById(url)).text() + ': ' + object.get('time');
           $(document.getElementById(url)).text(content);
         }
       },
@@ -968,7 +1103,7 @@ function addCount(Counter) {
         counter.increment("time");
         counter.save(null, {
           success: function(counter) {
-            var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+            var content = $(document.getElementById(url)).text() + ': ' + counter.get('time');
             $(document.getElementById(url)).text(content);
           },
           error: function(counter, error) {
@@ -983,7 +1118,7 @@ function addCount(Counter) {
         newcounter.save(null, {
           success: function(newcounter) {
               console.log("newcounter.get('time')="+newcounter.get('time'));
-            var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+            var content = $(document.getElementById(url)).text() + ': ' + newcounter.get('time');
             $(document.getElementById(url)).text(content);
           },
           error: function(newcounter, error) {

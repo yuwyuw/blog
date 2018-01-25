@@ -247,7 +247,7 @@
         
           
         
-        嗯..! 目前共计 12 篇日志。 继续努力。
+        嗯..! 目前共计 13 篇日志。 继续努力。
       </span>
 
       
@@ -261,6 +261,43 @@
           <div class="collection-title">
             <h1 class="archive-year" id="archive-year-2018">2018</h1>
           </div>
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/01/25/url-return/" itemprop="url">
+              
+                <span itemprop="name">在浏览器地址栏输入一个URL后回车，背后发生了什么</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-01-25T16:03:00+08:00"
+              content="2018-01-25" >
+          01-25
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
         
         
 
@@ -460,7 +497,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -836,13 +873,13 @@ function showTime(Counter) {
     query.find({
       success: function(results) {
         if (results.length == 0) {
-          var content = '0 ' + $(document.getElementById(url)).text();
+          var content = $(document.getElementById(url)).text() + ': 0';
           $(document.getElementById(url)).text(content);
           return;
         }
         for (var i = 0; i < results.length; i++) {
           var object = results[i];
-          var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+          var content = $(document.getElementById(url)).text() + ': ' + object.get('time');
           $(document.getElementById(url)).text(content);
         }
       },
@@ -868,7 +905,7 @@ function addCount(Counter) {
         counter.increment("time");
         counter.save(null, {
           success: function(counter) {
-            var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+            var content = $(document.getElementById(url)).text() + ': ' + counter.get('time');
             $(document.getElementById(url)).text(content);
           },
           error: function(counter, error) {
@@ -883,7 +920,7 @@ function addCount(Counter) {
         newcounter.save(null, {
           success: function(newcounter) {
               console.log("newcounter.get('time')="+newcounter.get('time'));
-            var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+            var content = $(document.getElementById(url)).text() + ': ' + newcounter.get('time');
             $(document.getElementById(url)).text(content);
           },
           error: function(newcounter, error) {
