@@ -58,7 +58,34 @@ this指向构造函数，this不再是全局变量
     alert(newTest.x) //1
     alert(x) // 2
 ```
-###### 情况四、使用 Function.prototype 中的三个方法 call(), apply(), bind()
+###### 情况四、箭头函数
+1.箭头函数作为函数的一种形式,对于this的处理和普通函数有所区别,其没有自己的this上下文,也就是说通过bind/call/apply函数方法设置this值时无效的，会被忽略。
+2.因为箭头函数没有自己的this上下文，那么当它作为对象的方法函数运行时，this并不指向这个对象
+3.箭头函数的的函数体中出现的this在运行时绑定到最近的作用域上下文对象
+4.你可以认为箭头函数的this和调用者无关，只和其定义时所在的上下文相关
+```
+function Person() {
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++; // |this| 正确地指向person 对象
+  }, 1000);
+}
+
+var p = new Person();
+```
+```
+    function objWrapper() {
+      var a = 10;
+      var obj = {
+        foo: () => console.log(this.a)
+      }
+      obj.foo(); 
+    }
+    objWrapper.call({a:20});//20
+    objWrapper();//undefined
+```
+###### 情况五、使用 Function.prototype 中的三个方法 call(), apply(), bind()
 这三个函数，都可以改变函数的 this 指向到指定的对象，上面代码中， foo() 内部的 this 遵循默认绑定规则，绑定到全局变量中。而 bar() 在调用的时候，调用了 apply() 函数，把 this 绑定到了一个新的对象中 {a: 2}，而且原封不动的接收 foo() 接收的函数。
 ```js
     function foo() {
