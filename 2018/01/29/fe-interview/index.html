@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="有关前端一些常见的知识点。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端知识点">
+<meta property="og:url" content="http://yoursite.com/2018/01/29/fe-interview/index.html">
+<meta property="og:site_name" content="Lemon&#39;s Blog">
+<meta property="og:description" content="有关前端一些常见的知识点。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-02T02:26:05.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端知识点">
+<meta name="twitter:description" content="有关前端一些常见的知识点。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/01/29/fe-interview/"/>
+
+
+
+
+
+  <title>前端知识点 | Lemon's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lemon's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/29/fe-interview/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">前端知识点</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表时间：</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T14:04:09+08:00">
+                2018-01-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/01/29/fe-interview/" class="leancloud_visitors" data-flag-title="前端知识点">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>有关前端一些常见的知识点。<br><a id="more"></a></p>
+<h5 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h5><h6 id="什么是闭包，以及闭包的应用。"><a href="#什么是闭包，以及闭包的应用。" class="headerlink" title="什么是闭包，以及闭包的应用。"></a>什么是闭包，以及闭包的应用。</h6><p>由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成”定义在一个函数内部的函数”。所以，在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。</p>
+<h6 id="同步、异步、回调之间的执行顺序以及Javascript异步编程的4种方法。"><a href="#同步、异步、回调之间的执行顺序以及Javascript异步编程的4种方法。" class="headerlink" title="同步、异步、回调之间的执行顺序以及Javascript异步编程的4种方法。"></a>同步、异步、回调之间的执行顺序以及Javascript异步编程的4种方法。</h6><p>执行顺序：</p>
+<ul>
+<li>同步 =&gt; 异步 =&gt; 回调。</li>
+</ul>
+<p>异步编程：</p>
+<ul>
+<li>回调函数。</li>
+<li>事件监听。</li>
+<li>发布信号。</li>
+<li>Promises对象。</li>
+</ul>
+<h6 id="什么是跨域？以及跨域的解决方式。"><a href="#什么是跨域？以及跨域的解决方式。" class="headerlink" title="什么是跨域？以及跨域的解决方式。"></a>什么是跨域？以及跨域的解决方式。</h6><ul>
+<li>什么是跨域？<br>一个域名下请求另外一个域名的资源。</li>
+<li>解决方式。<br>1.「jsonp」。<br>2.「CORS 」Cross-Origin Resource Sharing(跨域资源共享)是一种允许当前域（origin）的资源（比如html/js/web service）被其他域（origin）的脚本请求访问的机制。当使用XMLHttpRequest发送请求时，浏览器如果发现违反了同源策略就会自动加上一个请求头:origin,后端在接受到请求后确定响应后会在Response Headers中加入一个属性:Access-Control-Allow-Origin,值就是发起请求的源地址，浏览器得到响应会进行判断Access-Control-Allow-Origin的值是否和当前的地址相同，只有匹配成功后才进行响应处理。<br>3.「服务器跨域 」在前后端分离的项目中可以借助服务器实现跨域，具体做法是：前端向本地服务器发送请求，本地服务器代替前端再向api服务器接口发送请求进行服务器间通信，本地服务器其实就是个中转站的角色，再将响应的数据返回给前端。<br>4.「postmessage跨域 」、在HTML5中新增了postMessage方法，postMessage可以实现跨文档消息传输（Cross Document Messaging），Internet Explorer 8, Firefox 3, Opera 9, Chrome 3和 Safari 4都支持postMessage。该方法可以通过绑定window的message事件来监听发送跨文档消息传输内容。 </li>
+<li>弊端。<br>jsonp只能发送get请求、cors会忽略cookie、服务器跨域需要另起服务器。</li>
+</ul>
+<h6 id="JSON-和-JSONP的区别。"><a href="#JSON-和-JSONP的区别。" class="headerlink" title="JSON 和 JSONP的区别。"></a>JSON 和 JSONP的区别。</h6><ul>
+<li>JSON是一种基于文本的数据交换方式。跨平台传递极其简单，后台语言几乎全部支持。方便使用。</li>
+<li>JSONP是一种非正式传输协议，该协议的一个要点就是允许用户传递一个callback参数给服务端，然后服务端返回数据时会将这个callback参数作为函数名来包裹住JSON数据，这样客户端就可以随意定制自己的函数来自动处理返回数据了。</li>
+</ul>
+<h6 id="Canvas-和SVG的区别。"><a href="#Canvas-和SVG的区别。" class="headerlink" title="Canvas 和SVG的区别。"></a>Canvas 和SVG的区别。</h6><ul>
+<li>Canvas。<br>1.通过 JavaScript 来绘制 2D 图形。<br>2.是逐像素进行渲染的。<br>3.一旦图形被绘制完成，它就不会继续得到浏览器的关注。如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象。</li>
+<li>SVG。<br>1.是一种使用 XML 描述 2D 图形的语言。<br>2.基于 XML，这意味着 SVG DOM 中的每个元素都是可用的。您可以为某个元素附加 JavaScript 事件处理器。<br>3.每个被绘制的图形均被视为对象。如果 SVG 对象的属性发生变化，那么浏览器能够自动重现图形。</li>
+<li>比较。<br>1.Canvas依赖分辨率、不支持事件处理器、能够以 .png 或 .jpg 格式保存结果图像、最适合图像密集型的游戏。<br>2.SVG不依赖分辨率、支持事件处理器、不适合游戏应用。</li>
+</ul>
+<h6 id="JS数据类型。"><a href="#JS数据类型。" class="headerlink" title="JS数据类型。"></a>JS数据类型。</h6><ul>
+<li>6种原始数据类型。</li>
+</ul>
+<ol>
+<li>Boolean。</li>
+<li>Null。</li>
+<li>Undefined。</li>
+<li>Number。</li>
+<li>String。</li>
+<li>Symbol(ES6新定义)。</li>
+</ol>
+<ul>
+<li>Object。</li>
+</ul>
+<h6 id="判断是否为字符串。"><a href="#判断是否为字符串。" class="headerlink" title="判断是否为字符串。"></a>判断是否为字符串。</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isString</span>(<span class="params">stringToCheck</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">typeof</span> stringToCheck === <span class="string">'string'</span> || stringToCheck <span class="keyword">instanceof</span> <span class="built_in">String</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="判断是否为数字。"><a href="#判断是否为数字。" class="headerlink" title="判断是否为数字。"></a>判断是否为数字。</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isNumber</span> (<span class="params">numberToCheck</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">typeof</span> numberToCheck === <span class="string">'number'</span> || numberToCheck <span class="keyword">instanceof</span> <span class="built_in">Number</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="判断是否为数组。"><a href="#判断是否为数组。" class="headerlink" title="判断是否为数组。"></a>判断是否为数组。</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isArray</span> (<span class="params">arrayToCheck</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Array</span>.isArray(arrayToCheck)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="判断是否为对象。"><a href="#判断是否为对象。" class="headerlink" title="判断是否为对象。"></a>判断是否为对象。</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isObject</span> (<span class="params">objectToCheck</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!!objectToCheck) &#123;</span><br><span class="line">        <span class="keyword">return</span> objectToCheck.constructor === <span class="built_in">Object</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="判断是否为空对象。-对象不为空返回false，null-array等返回true"><a href="#判断是否为空对象。-对象不为空返回false，null-array等返回true" class="headerlink" title="判断是否为空对象。(对象不为空返回false，null,array等返回true)"></a>判断是否为空对象。(对象不为空返回false，null,array等返回true)</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isEmptyObj</span> (<span class="params">objectToCheck</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> boolean = <span class="literal">true</span></span><br><span class="line">    <span class="keyword">if</span> (!!objectToCheck) &#123;</span><br><span class="line">        boolen =  !(objectToCheck.constructor === <span class="built_in">Object</span> &amp;&amp; !!<span class="built_in">Object</span>.keys(objectToCheck).length)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> boolean;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="React和Vue的优缺点。"><a href="#React和Vue的优缺点。" class="headerlink" title="React和Vue的优缺点。"></a>React和Vue的优缺点。</h6><ul>
+<li>Vue。</li>
+</ul>
+<ol>
+<li>核心架构是MVVM（model,view,viewModel），特点是数据双向绑定。</li>
+<li>轻量级，对于简单页面、小型应用，vue开发则非常高效。</li>
+<li>vue源码相对简单，容易上手。</li>
+<li>后期维护成本高。</li>
+<li>不适用于大型项目。</li>
+</ol>
+<ul>
+<li>React。</li>
+</ul>
+<ol>
+<li>react是真正能把复杂问题拆分成独立的模块的。</li>
+<li>后期维护成本低。</li>
+<li>适用于大型的项目。</li>
+<li>有大量的社区。</li>
+<li>React的双向绑定的使用没有Vue便捷。</li>
+<li>对使用者有技术要求，学习成本高。</li>
+</ol>
+<h6 id="事件捕获与冒泡。"><a href="#事件捕获与冒泡。" class="headerlink" title="事件捕获与冒泡。"></a>事件捕获与冒泡。</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"outer"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"inner"</span>&gt;</span>Click me!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>事件捕获：<code>document -&gt; html -&gt; body -&gt; div -&gt; p</code>。<br>事件冒泡：<code>p -&gt; div -&gt; body -&gt; html -&gt; document</code>。<br>W3C：采用折中的方式,先捕获再冒泡。 </p>
+<h5 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h5><h6 id="CSS的书写顺序。"><a href="#CSS的书写顺序。" class="headerlink" title="CSS的书写顺序。"></a>CSS的书写顺序。</h6><ol>
+<li>位置属性。(<code>position, top, right, z-index, display, float</code>等)</li>
+<li>大小。(<code>width, height, padding, margin</code>)</li>
+<li>文字系列。(<code>font, line-height, letter-spacing, color- text-align</code>等)</li>
+<li>背景。(<code>background, border</code>等)</li>
+<li>其他。(<code>animation, transition</code>等)</li>
+</ol>
+<h6 id="清除浮动的方法。"><a href="#清除浮动的方法。" class="headerlink" title="清除浮动的方法。"></a>清除浮动的方法。</h6><ul>
+<li>给最后一个浮动元素添加一个兄弟元素、应用 <code>clear：both</code>。</li>
+<li>浮动元素的父级元素定义<code>overflow: auto</code>。</li>
+<li>浮动元素的父级元素定义宽高。</li>
+<li>给浮动元素的父级添加<code>:after</code>方法。<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">  &amp;:after &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">'.'</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h6 id="什么是BFC？"><a href="#什么是BFC？" class="headerlink" title="什么是BFC？"></a>什么是BFC？</h6><p>块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视化CSS渲染的部分，是块级盒布局发生的区域，也是浮动元素与其他元素交互的区域。<br>BFC的使用。</p>
+<ul>
+<li><code>float</code> 除了<code>none</code>以外的值。</li>
+<li><code>overflow</code> 除了<code>visible</code> 以外的值。（<code>hidden，auto，scroll</code> ）</li>
+<li><code>display</code>。 (<code>table-cell，table-caption，inline-block, flex, inline-flex</code>)</li>
+<li><code>position</code>。值为（<code>absolute，fixed</code>）</li>
+</ul>
+<p>BFC的应用场景。</p>
+<ul>
+<li><p>解决margin叠加问题。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"demo1"</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"demo2"</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.demo1</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>:  <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p><code>2个P标签</code>的<code>margin</code>是<code>50px</code>，而不是<code>100px</code>,因为发生了<code>margin</code>叠加。如果想要<code>2个P标签</code>的值是<code>100px</code>，需要运动到BFC。给需要<code>margin</code>不叠加的一个元素添加一个父元素，设置<code>overflow: hidden</code>属性。</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"warp"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"demo1"</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"demo1"</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.warp</span> &#123;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>清除浮动。</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"demo1"</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"demo2"</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.demo1</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>:  <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="selector-class">.demo2</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>  这2个标签会重合，如果想要不重合，实现2栏布局需要运动到BFC。给浮动后的一个未浮动的元素添加<code>overflow:hidden</code>属性。</p>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.demo2</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h6 id="如何画一个三角形。"><a href="#如何画一个三角形。" class="headerlink" title="如何画一个三角形。"></a>如何画一个三角形。</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"demo1 demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span> //直角在左上方</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"demo2 demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span> //直角在右下方</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"demo3 demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span> //直角在左下方</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"demo4 demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span> //直角在右上方</span><br></pre></td></tr></table></figure>
+<ul>
+<li>画一个直角在左上方的三角形。<br>规律：希望直角在上方或者下方，就设置<code>border-top</code>或者<code>border-bottom</code>,希望左边或者右边透明就设置<code>border-left</code>或者<code>border-right</code>透明。<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.demo</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">5px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">//直角在左上方</span><br><span class="line"><span class="selector-class">.demo1</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">100px</span> solid red;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">100px</span> solid transparent;</span><br><span class="line">  &#125;</span><br><span class="line">//直角在右下方</span><br><span class="line"><span class="selector-class">.demo2</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">100px</span> solid transparent;</span><br><span class="line">  &#125;</span><br><span class="line">//直角在左下方  </span><br><span class="line"><span class="selector-class">.demo3</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">100px</span> solid transparent;</span><br><span class="line">  &#125;</span><br><span class="line">//直角在右上方  </span><br><span class="line"><span class="selector-class">.demo4</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">100px</span> solid red;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">100px</span> solid transparent;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h5><h5 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h5><h6 id="前端可以从哪些方面优化？"><a href="#前端可以从哪些方面优化？" class="headerlink" title="前端可以从哪些方面优化？"></a>前端可以从哪些方面优化？</h6><p>一、页面级优化<br>1.减少 HTTP请求数。</p>
+<ul>
+<li>「从设计实现层面简化页面。」保持页面简洁、减少资源的使用。</li>
+<li>「合理设置 HTTP缓存。」恰当的缓存设置可以大大的减少 HTTP请求。</li>
+<li>「资源合并与压缩。」CSS、Javascript、Image都可以用相应的工具进行压缩，压缩后往往能省下不少空间。 </li>
+<li>雪碧图。</li>
+<li>懒加载。</li>
+</ul>
+<p>2.「将外部脚本置底。」如果外部脚本出现问题，至少可以加载完静态页面。<br>3.「异步执行」。 保证脚本在页面内容后面加载。<br>4.按需加载。<br>5.将 CSS放在 HEAD中。<br>6.异步请求。<br>7.减少不必要的 HTTP跳转。<br>8.避免重复的资源请求。<br>二、代码级优化<br>1.优化JS，函数命名简洁易读,代码干练，减少DOM。<br>2.选择合理的CSS选择符以及层级。<br>3.Image压缩</p>
+<h6 id="网页性能管理详解。"><a href="#网页性能管理详解。" class="headerlink" title="网页性能管理详解。"></a><a href="http://www.ruanyifeng.com/blog/2015/09/web-page-performance-in-depth.html" target="_blank" rel="noopener">网页性能管理详解。</a></h6><blockquote>
+<p>文章涉及网页生成的过程、重排和重绘、对于性能的影响等。<br>重构：页面任何的变化都可以称为页面重构：完全重构、细节调整。<br>重排（回流）：重新排版，为渲染树需要重新计算。（DOM元素的几何属性变化、DOM树的结构变化、获取某些属性、其他）<br>重绘是重新描绘,如改变<code>visibility</code>、<code>outline</code>、<code>background-color</code>等<br>重排是DOM节点发生了变化，重绘是样式发生了变化。所以重排一定会重绘，但是重绘不一定会重排。</p>
+</blockquote>
+<h5 id="普文"><a href="#普文" class="headerlink" title="普文"></a>普文</h5><h6 id="为什么页面需要加上DOCTYPE。"><a href="#为什么页面需要加上DOCTYPE。" class="headerlink" title="为什么页面需要加上DOCTYPE。"></a>为什么页面需要加上DOCTYPE。</h6><p>它的目的是要告诉标准通用标记语言解析器，它应该使用什么样的文档类型定义（DTD）来解析文档。目前有3种解析方式：</p>
+<ul>
+<li>非怪异（标准）模式。</li>
+<li>怪异模式。</li>
+<li>部分怪异（近乎标准）模式。</li>
+</ul>
+<blockquote>
+<p>在“标准模式”(standards mode) 页面按照 HTML 与 CSS 的定义渲染，而在“怪异模式(quirks mode) 模式”中则尝试模拟更旧的浏览器的行为。 一些浏览器（例如，那些基于 Mozilla 的 Gecko 渲染引擎的，或者 Internet Explorer 8 在 strict mode 下）也使用一种尝试于这两者之间妥协的“近乎标准”(almost standards) 模式，实施了一种表单元格尺寸的怪异行为，除此之外符合标准定义。<br>一个不含任何<code>DOCTYPE</code>的网页将会以 怪异(quirks) 模式渲染。<br>HTML5提供的<doctype html="">是标准模式，向后兼容的, 等同于开启了标准模式，那么浏览器就得老老实实的按照W3C的 标准解析渲染页面，这样一来，你的页面在所有的浏览器里显示的就都是一个样子了。</doctype></p>
+</blockquote>
+<h6 id="IE盒子模型和标准盒子模型有什么重要区别？"><a href="#IE盒子模型和标准盒子模型有什么重要区别？" class="headerlink" title="IE盒子模型和标准盒子模型有什么重要区别？"></a>IE盒子模型和标准盒子模型有什么重要区别？</h6><p>盒子模型是由<code>margin</code>、<code>border</code>、<code>padding</code>、<code>content</code>组成。<br>两者的区别在于<code>content</code>的不同，IE盒模型的<code>content</code>包括<code>border</code>、<code>padding</code>。</p>
+<h6 id="什么是viewport。"><a href="#什么是viewport。" class="headerlink" title="什么是viewport。"></a><a href="http://www.css88.com/archives/5975" target="_blank" rel="noopener">什么是viewport</a>。</h6>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/25/url-return/" rel="next" title="在浏览器地址栏输入一个URL后回车，背后发生了什么">
+                <i class="fa fa-chevron-left"></i> 在浏览器地址栏输入一个URL后回车，背后发生了什么
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Lemon" />
+            
+              <p class="site-author-name" itemprop="name">Lemon</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/yuwyuw" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://weibo.com/5553498097/profile?topnav=1&wvr=6" target="_blank" title="微博">
+                    
+                      <i class="fa fa-fw fa-globe"></i>微博</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://xiaoda.github.io/" target="_blank" title="小打博客">
+                    
+                      <i class="fa fa-fw fa-globe"></i>小打博客</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://wangmuqi.github.io/" target="_blank" title="婷婷博客">
+                    
+                      <i class="fa fa-fw fa-globe"></i>婷婷博客</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://liuzmeng.github.io/" target="_blank" title="剑走偏锋博客">
+                    
+                      <i class="fa fa-fw fa-globe"></i>剑走偏锋博客</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://fe.anchnet.com/" target="_blank" title="安畅前端博客">
+                    
+                      <i class="fa fa-fw fa-globe"></i>安畅前端博客</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#JS"><span class="nav-number">1.</span> <span class="nav-text">JS</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#什么是闭包，以及闭包的应用。"><span class="nav-number">1.1.</span> <span class="nav-text">什么是闭包，以及闭包的应用。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#同步、异步、回调之间的执行顺序以及Javascript异步编程的4种方法。"><span class="nav-number">1.2.</span> <span class="nav-text">同步、异步、回调之间的执行顺序以及Javascript异步编程的4种方法。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#什么是跨域？以及跨域的解决方式。"><span class="nav-number">1.3.</span> <span class="nav-text">什么是跨域？以及跨域的解决方式。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#JSON-和-JSONP的区别。"><span class="nav-number">1.4.</span> <span class="nav-text">JSON 和 JSONP的区别。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Canvas-和SVG的区别。"><span class="nav-number">1.5.</span> <span class="nav-text">Canvas 和SVG的区别。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#JS数据类型。"><span class="nav-number">1.6.</span> <span class="nav-text">JS数据类型。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#判断是否为字符串。"><span class="nav-number">1.7.</span> <span class="nav-text">判断是否为字符串。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#判断是否为数字。"><span class="nav-number">1.8.</span> <span class="nav-text">判断是否为数字。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#判断是否为数组。"><span class="nav-number">1.9.</span> <span class="nav-text">判断是否为数组。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#判断是否为对象。"><span class="nav-number">1.10.</span> <span class="nav-text">判断是否为对象。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#判断是否为空对象。-对象不为空返回false，null-array等返回true"><span class="nav-number">1.11.</span> <span class="nav-text">判断是否为空对象。(对象不为空返回false，null,array等返回true)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#React和Vue的优缺点。"><span class="nav-number">1.12.</span> <span class="nav-text">React和Vue的优缺点。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#事件捕获与冒泡。"><span class="nav-number">1.13.</span> <span class="nav-text">事件捕获与冒泡。</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#CSS"><span class="nav-number">2.</span> <span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#CSS的书写顺序。"><span class="nav-number">2.1.</span> <span class="nav-text">CSS的书写顺序。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#清除浮动的方法。"><span class="nav-number">2.2.</span> <span class="nav-text">清除浮动的方法。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#什么是BFC？"><span class="nav-number">2.3.</span> <span class="nav-text">什么是BFC？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#如何画一个三角形。"><span class="nav-number">2.4.</span> <span class="nav-text">如何画一个三角形。</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安全"><span class="nav-number">3.</span> <span class="nav-text">安全</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#性能"><span class="nav-number">4.</span> <span class="nav-text">性能</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#前端可以从哪些方面优化？"><span class="nav-number">4.1.</span> <span class="nav-text">前端可以从哪些方面优化？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#网页性能管理详解。"><span class="nav-number">4.2.</span> <span class="nav-text">网页性能管理详解。</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#普文"><span class="nav-number">5.</span> <span class="nav-text">普文</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#为什么页面需要加上DOCTYPE。"><span class="nav-number">5.1.</span> <span class="nav-text">为什么页面需要加上DOCTYPE。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IE盒子模型和标准盒子模型有什么重要区别？"><span class="nav-number">5.2.</span> <span class="nav-text">IE盒子模型和标准盒子模型有什么重要区别？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#什么是viewport。"><span class="nav-number">5.3.</span> <span class="nav-text">什么是viewport。</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lemon</span>
+
+  
+</div>
+
+
+
+<span id="busuanzi_container_site_pv">
+    本站总访问量：<span id="busuanzi_value_site_pv"></span>次
+</span>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("loN0PiCEyO4ELU6Q5aohMM0p-gzGzoHsz", "0h2ms8uh8FuFC9FNu95qh7Bv");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("loN0PiCEyO4ELU6Q5aohMM0p-gzGzoHsz", "0h2ms8uh8FuFC9FNu95qh7Bv");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+</body>
+</html>
