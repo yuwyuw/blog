@@ -42,8 +42,8 @@ author: lemon
       [min,max,count] = [Number(min), Number(max), Number(count)]
       let result = [],
       randomList = [],
-      boolToCheckNum = _isCheckToParm(min, max, count);
-      if (!boolToCheckNum) return result;
+      checkResult = _checkParam(min, max, count);
+      if (!checkResult) return result;
       // 确定数组的取值范围是min~max
       for (var i = min; i <= max; i++) {
         randomList.push(i)
@@ -56,19 +56,16 @@ author: lemon
       result = randomList.splice(0, count);
       return result;
     }
-    function _isCheckToParm (min, max, count) {
+    function _checkParam (min, max, count) {
       let result = false,
-      parmList = [min, max, count];
-      function _ischeckToNum (values) {
-        return values && typeof values === 'number'
-      }
-      parmList.filter(_ischeckToNum);
-      if (parmList.length > 2 && max - min > 0) {
+      paramList = [min, max, count];
+      paramList.filter((values) => values && typeof values === 'number');
+      if (paramList.length > 2 && max - min > 0) {
         result = true;
       }
       return result;
     }
-    console.log(randomList('1', '5', ' 3 '));
+    console.log(randomList('5', '10', ' 3 '));
 ```
 
 让数组随机不重复以后，在取出所需要的数据，这大大提高了执行的效率。其次，让调用者修改取值范围提高了实用性。
