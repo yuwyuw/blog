@@ -1,5 +1,5 @@
 ---
-title: 如何使用TypeScript
+title: TypeScript开发环境搭建
 date: 2018-01-22 11:21:10
 tags:
 ---
