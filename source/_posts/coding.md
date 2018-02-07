@@ -39,36 +39,36 @@ author: lemon
 
 ```js
     function randomList (min, max, count) {
-      [min, max, count] = [Number(min), Number(max), Number(count)];
+      [min,max,count] = [Number(min), Number(max), Number(count)]
       let result = [],
-      boolToCheck = _isCheckToParm(min,max,count);
-      if (!boolToCheck) return result;
-      //生成一个从min到max按序排列的数组
+      randomList = [],
+      boolToCheckNum = _isCheckToParm(min, max, count);
+      if (!boolToCheckNum) return result;
+      // 确定数组的取值范围是min~max
       for (var i = min; i <= max; i++) {
-        result.push(i);
+        randomList.push(i)
       }
-      //数组随机
-      result.sort(() => {
+      // 让数组随机
+      randomList.sort(() => {
         return Math.random() - 0.5;
       })
-      //取出指定长度的数组
-      result = result.slice(0, count);
+      // 取出指定数目的数组
+      result = randomList.splice(0, count);
       return result;
     }
     function _isCheckToParm (min, max, count) {
       let result = false,
-      initList = [min, max, count],
-      typeToNumberList = initList.filter(_isCheckToNumber);
-      function _isCheckToNumber (value) {
-        return value && typeof Number(value) === 'number' && Number(value) >= 0;
+      parmList = [min, max, count];
+      function _ischeckToNum (values) {
+        return values && typeof values === 'number'
       }
-      //condition：1.参数必须为数字类型或者字符串类型的数字并大于0；2.max大于min
-      if (Number(max) - Number(min) > 0 && typeToNumberList.length > 2) {
+      parmList.filter(_ischeckToNum);
+      if (parmList.length > 2 && max - min > 0) {
         result = true;
       }
       return result;
     }
-    randomList('2', '6 ', 2);
+    console.log(randomList('1', '5', ' 3 '));
 ```
 
 让数组随机不重复以后，在取出所需要的数据，这大大提高了执行的效率。其次，让调用者修改取值范围提高了实用性。
