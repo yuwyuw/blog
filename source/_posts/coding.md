@@ -62,7 +62,7 @@ author: lemon
       paramList.filter((values) => values && typeof values === 'number');
       if (paramList.length > 2 && max - min > 0) {
         result = true;
-      }
+ ``     }
       return result;
     }
     console.log(randomList('5', '10', ' 3 '));

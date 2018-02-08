@@ -93,6 +93,46 @@ function isEmptyObj (objectToCheck) {
     return boolean;
 }
 ```
+###### 数组去重
+```js
+function uniq (array) {
+    let result = [];
+    if (Array.isArray(array)) {
+        result = [...new Set(array)]
+    }
+    return result;
+}
+```
+###### 计算并集并去重
+```js
+function union (array1, array2) {
+    let result = [];
+    if(Array.isArray(array1) && Array.isArray(array2)) {
+        result = [...new Set([...array1, ...array2])]
+    }
+    return result;
+}
+```
+###### 计算交集并去重
+```js
+function intersection (array1, array2) {
+    let result = [];
+    if (Array.isArray(array1) && Array.isArray(array2)) {
+        result = [...new Set(array1.filter(v => array2.includes(v)))];
+    }
+    return result;
+}
+```
+###### 计算差集并去重
+```js
+function difference (array1, array2) {
+    let result = [];
+    if (Array.isArray(array1) && Array.isArray(array2)) {
+        result = [...new Set(array1.concat(array2).filter(v => !array1.includes(v) || !array2.includes(v)))]
+    }
+    return result;
+}
+```
 ###### React和Vue的优缺点。
 - Vue。
 1. 核心架构是MVVM（model,view,viewModel），特点是数据双向绑定。
