@@ -93,7 +93,7 @@ function isEmptyObj (objectToCheck) {
     return boolean;
 }
 ```
-###### 数组去重
+###### 数组去重。
 ```js
 function uniq (array) {
     let result = [];
@@ -103,7 +103,7 @@ function uniq (array) {
     return result;
 }
 ```
-###### 计算并集并去重
+###### 计算并集并去重。
 ```js
 function union (array1, array2) {
     let result = [];
@@ -113,7 +113,7 @@ function union (array1, array2) {
     return result;
 }
 ```
-###### 计算交集并去重
+###### 计算交集并去重。
 ```js
 function intersection (array1, array2) {
     let result = [];
@@ -123,7 +123,7 @@ function intersection (array1, array2) {
     return result;
 }
 ```
-###### 计算差集并去重
+###### 计算差集并去重。
 ```js
 function difference (array1, array2) {
     let result = [];
