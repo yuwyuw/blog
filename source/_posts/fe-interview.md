@@ -107,7 +107,7 @@ function uniq (array) {
 ```js
 function union (array1, array2) {
     let result = [];
-    if(Array.isArray(array1) && Array.isArray(array2)) {
+    if (Array.isArray(array1) && Array.isArray(array2)) {
         result = [...new Set([...array1, ...array2])]
     }
     return result;
@@ -133,6 +133,27 @@ function difference (array1, array2) {
     return result;
 }
 ```
+###### 冒泡排序
+```js
+function bubbleSort(array) {
+    var i,
+    j,
+    stop,
+    temp,
+    len = array.length;
+    for (i = 0; i < len - 1; i++) {
+        for (j = 0; j < len -1 -i; j++) {
+            if (array[j] < array[j + 1]) {
+                temp = array[j + 1];
+                array[j + 1 ] = array[j];
+                array[j] = temp;
+
+            }
+        }
+    }
+    return array;
+}
+```
 ###### React和Vue的优缺点。
 - Vue。
 1. 核心架构是MVVM（model,view,viewModel），特点是数据双向绑定。
@@ -156,7 +177,10 @@ function difference (array1, array2) {
 ```
 事件捕获：`document -> html -> body -> div -> p`。
 事件冒泡：`p -> div -> body -> html -> document`。
-W3C：采用折中的方式,先捕获再冒泡。 
+>IE采用冒泡型事件
+>Netscape(美国网景)采用捕获型事件
+>W3C采用折中的方式,先捕获再冒泡。 
+
 ##### CSS
 ###### CSS的书写顺序。
 1. 位置属性。(`position, top, right, z-index, display, float`等)
@@ -289,6 +313,7 @@ BFC的应用场景。
     border-left: 100px solid transparent;
   }
 ```
+###### [CSS 中居中的几种方式](https://juejin.im/entry/58aaaf03ac502e006972fd75)
 ##### 安全
 
 ##### 性能
@@ -337,3 +362,14 @@ HTML5提供的<DOCTYPE html>是标准模式，向后兼容的, 等同于开启�
 盒子模型是由`margin`、`border`、`padding`、`content`组成。
 两者的区别在于`content`的不同，IE盒模型的`content`包括`border`、`padding`。
 ###### [什么是viewport](http://www.css88.com/archives/5975)。
+###### 常见的浏览器内核
+- Trident(IE内核)
+- Gecko(Firefox内核)
+- WebKit(Google)
+
+###### [get和post的区别](https://zhuanlan.zhihu.com/p/22536382)
+###### [cookie、sessionStorage、localStorage 详解及应用场景](https://segmentfault.com/a/1190000010400892)
+###### [jsonp的原理](https://segmentfault.com/a/1190000007665361)
+###### [为什么说js是单线程](https://github.com/pramper/Blog/issues/4)
+###### [js原型链](http://www.ruanyifeng.com/blog/2011/06/designing_ideas_of_inheritance_mechanism_in_javascript.html)
+
