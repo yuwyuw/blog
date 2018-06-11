@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="在搭建Laravel项目时，需要安装一些环境，此文记载了一些安装步骤和环境异常的处理。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="有关Mac Laravel项目的搭建">
+<meta property="og:url" content="http://yoursite.com/2017/09/26/laravel/index.html">
+<meta property="og:site_name" content="Lemon&#39;s Blog">
+<meta property="og:description" content="在搭建Laravel项目时，需要安装一些环境，此文记载了一些安装步骤和环境异常的处理。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-26T02:49:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="有关Mac Laravel项目的搭建">
+<meta name="twitter:description" content="在搭建Laravel项目时，需要安装一些环境，此文记载了一些安装步骤和环境异常的处理。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/09/26/laravel/"/>
+
+
+
+
+
+  <title>有关Mac Laravel项目的搭建 | Lemon's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lemon's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/26/laravel/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">有关Mac Laravel项目的搭建</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表时间：</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-26T10:55:15+08:00">
+                2017-09-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/09/26/laravel/" class="leancloud_visitors" data-flag-title="有关Mac Laravel项目的搭建">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在搭建Laravel项目时，需要安装一些环境，此文记载了一些安装步骤和环境异常的处理。<br><a id="more"></a></p>
+<h6 id="服务器环境"><a href="#服务器环境" class="headerlink" title="服务器环境"></a>服务器环境</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PHP &gt;= 7.0.0</span><br><span class="line">PHP OpenSSL 扩展</span><br><span class="line">PHP PDO 扩展</span><br><span class="line">PHP Mbstring 扩展</span><br><span class="line">PHP Tokenizer 扩展</span><br><span class="line">PHP XML 扩展</span><br></pre></td></tr></table></figure>
+<h6 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 安装依赖 PHP7 --&gt;</span></span><br><span class="line">     brew tap homebrew/php（如能搜到php71可忽略）</span><br><span class="line">     brew install  php71  php71-mcrypt</span><br><span class="line">     brew link php71 （设置当前环境所有 php 使用 php7）</span><br><span class="line"> </span><br><span class="line"><span class="comment">&lt;!-- 启动 PHP-FPM --&gt;</span></span><br><span class="line">     brew services start php71</span><br><span class="line"><span class="comment">&lt;!-- 安装 Nginx --&gt;</span></span><br><span class="line">     brew  install nginx  （已有忽略）</span><br><span class="line"><span class="comment">&lt;!-- 安装 Composer (依赖包管理器) --&gt;</span></span><br><span class="line">     brew install composer</span><br></pre></td></tr></table></figure>
+<h6 id="安装-Laravel-安装器"><a href="#安装-Laravel-安装器" class="headerlink" title="安装 Laravel 安装器"></a>安装 Laravel 安装器</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer global require "laravel/installer"</span><br></pre></td></tr></table></figure>
+<h6 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH="$HOME/.composer/vendor/bin:$PATH"</span><br></pre></td></tr></table></figure>
+<h6 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">laravel new blog    (新建项目名称叫 blog 并且在当前目录下生成 blog 文件夹)</span><br></pre></td></tr></table></figure>
+<h6 id="Copy-项目目录下的-env-example-文件为-env"><a href="#Copy-项目目录下的-env-example-文件为-env" class="headerlink" title="Copy 项目目录下的 .env.example 文件为 .env"></a>Copy 项目目录下的 .env.example 文件为 .env</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp .env.example .env</span><br></pre></td></tr></table></figure>
+<h6 id="设置应用程序密钥"><a href="#设置应用程序密钥" class="headerlink" title="设置应用程序密钥"></a>设置应用程序密钥</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在你安装完 Laravel 后，首先需要做的事情是设置一个随机字符串的密钥。假设你是通过 Composer 或是 Laravel 安装工具安装的 Laravel，那么这个密钥已经通过 key:generate 命令帮你设置完成。通常这个密钥会有 32 字符长。这个密钥可以被设置在 .env 环境文件中。如果你还没将 .env.example 文件重命名为 .env，那么你现在应该去设置下。</span><br><span class="line">如果应用程序密钥没有被设置的话，你的用户 Session 和其它的加密数据都是不安全的！</span><br><span class="line">命令：php artisan key:generate</span><br></pre></td></tr></table></figure>
+<h6 id="Nginx-配置规则"><a href="#Nginx-配置规则" class="headerlink" title="Nginx 配置规则"></a>Nginx 配置规则</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">server</span><br><span class="line">&#123;</span><br><span class="line">    # 端口  80 小端口需要 root 启动 Nginx ，大端口 如 8080 不需要 root</span><br><span class="line">    listen          80;</span><br><span class="line">    # host  域名</span><br><span class="line">    server_name     admin.cloud.51idc.com;</span><br><span class="line">    # 目录 (注意：是项目目录下的 public 目录)</span><br><span class="line">    root            /Users/eagle/workspace/ xx/public;</span><br><span class="line">    index           index.php;</span><br><span class="line">    # 伪静态规则（必须含有）</span><br><span class="line">    try_files       $uri /index.php$is_args$query_string;</span><br><span class="line">    location ~ \.php$ &#123;</span><br><span class="line">        try_files                   $uri = 404;</span><br><span class="line">        fastcgi_split_path_info     ^(.+\.php)(/.+)$;</span><br><span class="line">        fastcgi_connect_timeout     30s;</span><br><span class="line">        fastcgi_read_timeout        100s;</span><br><span class="line">        fastcgi_pass                127.0.0.1:9000;</span><br><span class="line">        fastcgi_param               SCRIPT_FILENAME  $document_root$fastcgi_script_name;</span><br><span class="line">        fastcgi_param               SCRIPT_NAME $fastcgi_script_name;</span><br><span class="line">        include                     fastcgi_params;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="启动-Nginx-或者-重启-Nginx"><a href="#启动-Nginx-或者-重启-Nginx" class="headerlink" title="启动 Nginx 或者 重启 Nginx"></a>启动 Nginx 或者 重启 Nginx</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx -s reload</span><br><span class="line">&lt;!-- or --&gt;</span><br><span class="line">brew services start nginx</span><br><span class="line">&lt;!-- or --&gt;</span><br><span class="line">brew services restart nginx</span><br></pre></td></tr></table></figure>
+<h6 id="修改hosts-并浏览域名"><a href="#修改hosts-并浏览域名" class="headerlink" title="修改hosts,并浏览域名"></a>修改hosts,并浏览域名</h6><h6 id="模板使用说明"><a href="#模板使用说明" class="headerlink" title="模板使用说明"></a><a href="http://laravelacademy.org/post/5919.html" target="_blank" rel="noopener">模板使用说明</a></h6><h6 id="视图调用方法"><a href="#视图调用方法" class="headerlink" title="视图调用方法"></a><a href="http://laravelacademy.org/post/5908.html" target="_blank" rel="noopener">视图调用方法</a></h6><h6 id="安装说明"><a href="#安装说明" class="headerlink" title="安装说明"></a><a href="http://laravelacademy.org/post/5744.html" target="_blank" rel="noopener">安装说明</a></h6><h6 id="安装问题说明"><a href="#安装问题说明" class="headerlink" title="安装问题说明"></a>安装问题说明</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cross-env: command not found</span><br><span class="line"><span class="comment">&lt;!-- 解决方案： --&gt;</span></span><br><span class="line">cross-env是跨平台的环境变量，需要安装这个环境</span><br><span class="line">npm install cross-env --save-dev</span><br></pre></td></tr></table></figure>
+<h6 id="配置出现问题"><a href="#配置出现问题" class="headerlink" title="配置出现问题"></a>配置出现问题</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.events.js:160</span><br><span class="line">      throw er; // Unhandled 'error' event</span><br><span class="line">      ^</span><br><span class="line"></span><br><span class="line">Error: spawn node_modules/webpack/bin/webpack.js ENOENT</span><br><span class="line">    at exports._errnoException (util.js:1026:11)</span><br><span class="line">    <span class="comment">&lt;!-- 解决方案： --&gt;</span></span><br><span class="line">    rm -rf node_modules</span><br><span class="line">    rm package-lock.json</span><br><span class="line">    cnpm cache clear --force</span><br><span class="line">    cnpm install</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/07/vue/" rel="next" title="vue使用指南">
+                <i class="fa fa-chevron-left"></i> vue使用指南
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/26/html_meta/" rel="prev" title="HTML中的meta信息说明">
+                HTML中的meta信息说明 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Lemon" />
+            
+              <p class="site-author-name" itemprop="name">Lemon</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/yuwyuw" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://weibo.com/5553498097/profile?topnav=1&wvr=6" target="_blank" title="微博">
+                    
+                      <i class="fa fa-fw fa-globe"></i>微博</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://xiaoda.github.io/" target="_blank" title="小打博客">
+                    
+                      <i class="fa fa-fw fa-globe"></i>小打博客</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://wangmuqi.github.io/" target="_blank" title="婷婷博客">
+                    
+                      <i class="fa fa-fw fa-globe"></i>婷婷博客</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://liuzmeng.github.io/" target="_blank" title="剑走偏锋博客">
+                    
+                      <i class="fa fa-fw fa-globe"></i>剑走偏锋博客</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://fe.anchnet.com/" target="_blank" title="安畅前端博客">
+                    
+                      <i class="fa fa-fw fa-globe"></i>安畅前端博客</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#服务器环境"><span class="nav-number">1.</span> <span class="nav-text">服务器环境</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#环境安装"><span class="nav-number">2.</span> <span class="nav-text">环境安装</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#安装-Laravel-安装器"><span class="nav-number">3.</span> <span class="nav-text">安装 Laravel 安装器</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#添加环境变量"><span class="nav-number">4.</span> <span class="nav-text">添加环境变量</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#新建项目"><span class="nav-number">5.</span> <span class="nav-text">新建项目</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Copy-项目目录下的-env-example-文件为-env"><span class="nav-number">6.</span> <span class="nav-text">Copy 项目目录下的 .env.example 文件为 .env</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#设置应用程序密钥"><span class="nav-number">7.</span> <span class="nav-text">设置应用程序密钥</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Nginx-配置规则"><span class="nav-number">8.</span> <span class="nav-text">Nginx 配置规则</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#启动-Nginx-或者-重启-Nginx"><span class="nav-number">9.</span> <span class="nav-text">启动 Nginx 或者 重启 Nginx</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#修改hosts-并浏览域名"><span class="nav-number">10.</span> <span class="nav-text">修改hosts,并浏览域名</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#模板使用说明"><span class="nav-number">11.</span> <span class="nav-text">模板使用说明</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#视图调用方法"><span class="nav-number">12.</span> <span class="nav-text">视图调用方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#安装说明"><span class="nav-number">13.</span> <span class="nav-text">安装说明</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#安装问题说明"><span class="nav-number">14.</span> <span class="nav-text">安装问题说明</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#配置出现问题"><span class="nav-number">15.</span> <span class="nav-text">配置出现问题</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lemon</span>
+
+  
+</div>
+
+
+
+<span id="busuanzi_container_site_pv">
+    本站总访问量：<span id="busuanzi_value_site_pv"></span>次
+</span>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("loN0PiCEyO4ELU6Q5aohMM0p-gzGzoHsz", "0h2ms8uh8FuFC9FNu95qh7Bv");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("loN0PiCEyO4ELU6Q5aohMM0p-gzGzoHsz", "0h2ms8uh8FuFC9FNu95qh7Bv");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+</body>
+</html>

@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="像素（pixel）  设备像素  ：设备屏幕的物理像素。  CSS像素  ：是浏览器使用的抽象单位，为Web开发者创造的，用来精确度量网页上的内容。  三个视口桌面上视口宽度等于浏览器宽度，但在手机上有所不同。   布局视口  ：手机上为了容纳为桌面浏览器设计的网站，默认布局视口宽度远大于屏幕宽度，为了让用户看到网站全貌，它会缩小网站。  视觉视口  ：用户正在看到的网站的区域，与设备屏幕一样宽">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于移动端视口的布局方案">
+<meta property="og:url" content="http://yoursite.com/2018/03/26/m_layout/index.html">
+<meta property="og:site_name" content="Lemon&#39;s Blog">
+<meta property="og:description" content="像素（pixel）  设备像素  ：设备屏幕的物理像素。  CSS像素  ：是浏览器使用的抽象单位，为Web开发者创造的，用来精确度量网页上的内容。  三个视口桌面上视口宽度等于浏览器宽度，但在手机上有所不同。   布局视口  ：手机上为了容纳为桌面浏览器设计的网站，默认布局视口宽度远大于屏幕宽度，为了让用户看到网站全貌，它会缩小网站。  视觉视口  ：用户正在看到的网站的区域，与设备屏幕一样宽">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-26T07:27:01.520Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="基于移动端视口的布局方案">
+<meta name="twitter:description" content="像素（pixel）  设备像素  ：设备屏幕的物理像素。  CSS像素  ：是浏览器使用的抽象单位，为Web开发者创造的，用来精确度量网页上的内容。  三个视口桌面上视口宽度等于浏览器宽度，但在手机上有所不同。   布局视口  ：手机上为了容纳为桌面浏览器设计的网站，默认布局视口宽度远大于屏幕宽度，为了让用户看到网站全貌，它会缩小网站。  视觉视口  ：用户正在看到的网站的区域，与设备屏幕一样宽">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/03/26/m_layout/"/>
+
+
+
+
+
+  <title>基于移动端视口的布局方案 | Lemon's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lemon's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/m_layout/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">基于移动端视口的布局方案</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表时间：</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-26T11:15:33+08:00">
+                2018-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/03/26/m_layout/" class="leancloud_visitors" data-flag-title="基于移动端视口的布局方案">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <a id="more"></a>
+<h4 id="像素（pixel）"><a href="#像素（pixel）" class="headerlink" title="像素（pixel）"></a>像素（pixel）</h4><ul>
+<li><strong> 设备像素 </strong> ：设备屏幕的物理像素。</li>
+<li><strong> CSS像素 </strong> ：是浏览器使用的抽象单位，为Web开发者创造的，用来精确度量网页上的内容。</li>
+</ul>
+<h4 id="三个视口"><a href="#三个视口" class="headerlink" title="三个视口"></a>三个视口</h4><p>桌面上视口宽度等于浏览器宽度，但在手机上有所不同。</p>
+<ul>
+<li><strong> 布局视口 </strong> ：手机上为了容纳为桌面浏览器设计的网站，默认布局视口宽度远大于屏幕宽度，为了让用户看到网站全貌，它会缩小网站。</li>
+<li><strong> 视觉视口 </strong> ：用户正在看到的网站的区域，与设备屏幕一样宽。</li>
+<li><strong> 理想视口 </strong> ：当网站是为手机准备的时候使用。使用meta声明。</li>
+</ul>
+<h4 id="viewport"><a href="#viewport" class="headerlink" title="viewport"></a>viewport</h4><p>手机浏览器是把页面放在一个虚拟的“窗口”（viewport）中，通常这个虚拟的“窗口”（viewport）比屏幕宽，这样就不用把每个网页挤到很小的窗口中（这样会破坏没有针对手机浏览器优化的网页的布局），用户可以通过平移和缩放来看网页的不同部分。移动版的 Safari 浏览器最新引进了 viewport 这个 meta tag，让网页开发者来控制viewport的大小和缩放，其他手机浏览器也基本支持。一个常用的针对移动网页优化过的页面的viewport meta标签大致如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">”viewport”</span> <span class="attr">content</span>=<span class="string">”width</span>=<span class="string">device-width,</span> <span class="attr">initial-scale</span>=<span class="string">1,</span> <span class="attr">maximum-scale</span>=<span class="string">1″</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><code>width</code>：控制 viewport 的大小，可以指定的一个值，如果 750，或者特殊的值，如 device-width 为设备的宽度（单位为缩放为 100% 时的 CSS 的像素）。<br><code>height</code>：和 width 相对应，指定高度。<br><code>initial-scale</code>：初始缩放比例，也即是当页面第一次 load 的时候缩放比例。<br><code>maximum-scale</code>：允许用户缩放到的最大比例。<br><code>minimum-scale</code>：允许用户缩放到的最小比例。<br><code>user-scalable</code>：用户是否可以手动缩放</p>
+</blockquote>
+<h4 id="长度单位"><a href="#长度单位" class="headerlink" title="长度单位"></a>长度单位</h4><ul>
+<li><strong> px </strong> ：绝对单位，页面按精确像素展示</li>
+<li><strong> em </strong> ：相对单位，基准点为父节点字体的大小，如果自身定义了font-size按自身来计算（浏览器默认字体是16px），整个页面内1em不是一个固定的值。</li>
+<li><strong> rem </strong> ：相对单位，可理解为”root em”, 相对根节点html的字体大小来计算，CSS3新加属性，chrome/firefox/IE9+支持。</li>
+<li><strong> vw </strong> ：viewpoint width，视窗宽度，1vw等于视窗宽度的1%。</li>
+<li><strong> vh </strong> ：viewpoint height，视窗高度，1vh等于视窗高度的1%。</li>
+</ul>
+<h4 id="利用视口单位适配页面"><a href="#利用视口单位适配页面" class="headerlink" title="利用视口单位适配页面"></a>利用视口单位适配页面</h4><h6 id="做法一：仅使用vw作为CSS单位"><a href="#做法一：仅使用vw作为CSS单位" class="headerlink" title="做法一：仅使用vw作为CSS单位"></a>做法一：仅使用vw作为CSS单位</h6><ul>
+<li><p>使用viewport，理想视口为设备宽度</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">”viewport”</span> <span class="attr">content</span>=<span class="string">”width</span>=<span class="string">device-width,</span> <span class="attr">initial-scale</span>=<span class="string">1,</span> <span class="attr">maximum-scale</span>=<span class="string">1″</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对于设计稿的尺寸转换为vw单位，我们使用Sass函数编译</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 以iphone6尺寸作为设计稿基准，设计稿的宽度是750。</span></span><br><span class="line"><span class="comment">// 1vw等于视窗宽度的1%</span></span><br><span class="line">@function vw(<span class="variable">$px</span>) &#123;</span><br><span class="line">  @return (<span class="variable">$px</span> / 750) * 100vw;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 当实际字体小于12px的时候，统一渲染为12px，如果需要小于12px的字体，则采用transform缩小</span></span><br><span class="line">@function fvw(<span class="variable">$px</span>) &#123;</span><br><span class="line">  @<span class="keyword">if</span> (<span class="variable">$px</span> &lt;= 24) &#123;</span><br><span class="line">    @return (<span class="number">24</span> / 750) * 100vw;</span><br><span class="line">  &#125; @<span class="keyword">else</span> &#123;</span><br><span class="line">    @return (<span class="variable">$px</span> / 750) * 100vw;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>无论是文本还是布局高宽、间距等都使用 vw 作为 CSS 单位</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test-component</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    &amp;<span class="selector-class">.test1</span> &#123;</span><br><span class="line">      <span class="attribute">font-size</span>: fvw(<span class="number">12</span>);</span><br><span class="line">      <span class="attribute">width</span>: vw(<span class="number">688</span>);</span><br><span class="line">      <span class="attribute">height</span>: vw(<span class="number">180</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    &amp;<span class="selector-class">.test2</span> &#123;</span><br><span class="line">      <span class="attribute">font-size</span>: fvw(<span class="number">20</span>);</span><br><span class="line">      <span class="attribute">width</span>: vw(<span class="number">750</span>);</span><br><span class="line">      <span class="attribute">height</span>: vw(<span class="number">180</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong> 优点 </strong><br>1.不需要依赖脚本<br>2.可以控制最小的字体</p>
+</li>
+<li><strong> 缺点 </strong><br>1.需要引入scss环境<br>2.行业样式无法使用定义的vw计算方法<br>3.实现原理是等比放大或者缩小，不能实现当屏幕更大时，一行看到的字体更多。</li>
+</ul>
+<h6 id="做法二：将视口宽度设置为750px。"><a href="#做法二：将视口宽度设置为750px。" class="headerlink" title="做法二：将视口宽度设置为750px。"></a>做法二：将视口宽度设置为750px。</h6><ul>
+<li><p>使用viewport，理想视口为750</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">”viewport”</span> <span class="attr">content</span>=<span class="string">”width</span>=<span class="string">750,</span> <span class="attr">initial-scale</span>=<span class="string">1,</span> <span class="attr">maximum-scale</span>=<span class="string">1″</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>直接使用设计稿所定义的长度。不需要转换。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test-component</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    &amp;<span class="selector-class">.test1</span> &#123;</span><br><span class="line">      <span class="attribute">font-size</span>: <span class="number">24px</span>;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">688px</span>;</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">180px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    &amp;<span class="selector-class">.test2</span> &#123;</span><br><span class="line">      <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">750px</span>;</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">180px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong> 优点 </strong><br>1.不需要依赖scss环境<br>2.不需要进行单位转换，直接使用设计稿中的长度大小即可。</p>
+</li>
+<li><strong> 缺点 </strong><br>1.浏览器调试的时候可能会出现问题，实际情况以真机为准。<br>2.实现原理是等比放大或者缩小，不能实现当屏幕更大时，一行看到的字体更多。</li>
+</ul>
+<h6 id="做法三：使用rem布局-网易做法"><a href="#做法三：使用rem布局-网易做法" class="headerlink" title="做法三：使用rem布局(网易做法)"></a>做法三：使用rem布局(网易做法)</h6><p>无需自己手动引入viewport</p>
+<ul>
+<li><p>计算rem,在页面中引入js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">doc, win</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> docEl = doc.documentElement,</span><br><span class="line">        isIOS = navigator.userAgent.match(<span class="regexp">/\(i[^;]+;( U;)? CPU.+Mac OS X/</span>),</span><br><span class="line">        dpr = isIOS ? <span class="built_in">Math</span>.min(win.devicePixelRatio, <span class="number">3</span>) : <span class="number">1</span>,</span><br><span class="line">        dpr = <span class="built_in">window</span>.top === <span class="built_in">window</span>.self ? dpr : <span class="number">1</span>, <span class="comment">//被iframe引用时，禁止缩放</span></span><br><span class="line">        dpr = <span class="number">1</span>,</span><br><span class="line">        scale = <span class="number">1</span> / dpr,</span><br><span class="line">        resizeEvt = <span class="string">'orientationchange'</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">'orientationchange'</span> : <span class="string">'resize'</span>;</span><br><span class="line">    docEl.dataset.dpr = dpr;</span><br><span class="line">    <span class="keyword">var</span> metaEl = doc.createElement(<span class="string">'meta'</span>);</span><br><span class="line">    metaEl.name = <span class="string">'viewport'</span>;</span><br><span class="line">    metaEl.content = <span class="string">'initial-scale='</span> + scale + <span class="string">',maximum-scale='</span> + scale + <span class="string">', minimum-scale='</span> + scale;</span><br><span class="line">    docEl.firstElementChild.appendChild(metaEl);</span><br><span class="line">    <span class="keyword">var</span> recalc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> width = docEl.clientWidth;</span><br><span class="line">        <span class="keyword">if</span> (width / dpr &gt; <span class="number">750</span>) &#123;</span><br><span class="line">            width = <span class="number">750</span> * dpr;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 乘以100，px : rem = 100 : 1</span></span><br><span class="line">        docEl.style.fontSize = <span class="number">100</span> * (width / <span class="number">750</span>) + <span class="string">'px'</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">    recalc()</span><br><span class="line">    <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</span><br><span class="line">    win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</span><br><span class="line">&#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test-component</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    &amp;<span class="selector-class">.test1</span> &#123;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">6.88rem</span>;</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">1.8rem</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong> 优点 </strong><br>1.不依赖于scss<br>2.可实现自适应布局，当屏幕更大时，可实现一行看到的字体更多。<br>3.当屏幕变小时，看到的字体更大，屏幕变大时，看到的字体更多</p>
+</li>
+<li><strong> 缺点 </strong><br>1.无法控制最小字体。</li>
+</ul>
+<h6 id="做法四：使用vw和rem布局方式"><a href="#做法四：使用vw和rem布局方式" class="headerlink" title="做法四：使用vw和rem布局方式"></a>做法四：使用vw和rem布局方式</h6><ul>
+<li><p>使用viewport，理想视口为设备宽度</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">”viewport”</span> <span class="attr">content</span>=<span class="string">”width</span>=<span class="string">device-width,</span> <span class="attr">initial-scale</span>=<span class="string">1,</span> <span class="attr">maximum-scale</span>=<span class="string">1″</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对于设计稿的尺寸转换为rem 以及vw单位，我们使用Sass函数编译</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$vw_fontsize</span>: <span class="number">75</span>; <span class="comment">// 以iPhone 6尺寸根元素大小作为基准值</span></span><br><span class="line"><span class="variable">$vw_design</span>: <span class="number">750</span>; <span class="comment">// 以设计稿宽度750作为基准值</span></span><br><span class="line">@function rem(<span class="variable">$px</span>) &#123;</span><br><span class="line">  @return (<span class="variable">$px</span> / <span class="variable">$vw_fontsize</span> ) * 1rem;</span><br><span class="line">&#125;</span><br><span class="line">@function fvw(<span class="variable">$px</span>) &#123;</span><br><span class="line">  @<span class="keyword">if</span> (<span class="variable">$px</span> &lt;= 24) &#123;</span><br><span class="line">    @return (<span class="number">24</span> / 750) * 100vw;</span><br><span class="line">  &#125; @<span class="keyword">else</span> &#123;</span><br><span class="line">    @return (<span class="variable">$px</span> / 750) * 100vw;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: (<span class="variable">$vw_fontsize</span> / (<span class="variable">$vw_design</span>)) * <span class="number">100vw</span>;</span><br><span class="line">  <span class="comment">// 同时，通过Media Queries 限制根元素最大最小值</span></span><br><span class="line">  @<span class="keyword">media</span> screen and (max-width: 320px) &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">64px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  @<span class="keyword">media</span> screen and (min-width: 540px) &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">108px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>无论是文本还是布局高宽、间距等都使用 vw 作为 CSS 单位</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test-component</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    &amp;<span class="selector-class">.test1</span> &#123;</span><br><span class="line">      <span class="attribute">font-size</span>: fvw(<span class="number">58</span>);</span><br><span class="line">      <span class="attribute">width</span>: rem(<span class="number">688</span>);</span><br><span class="line">      <span class="attribute">height</span>: rem(<span class="number">180</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong> 优点 </strong><br>1.不需要依赖脚本<br>2.可以控制最小字体<br>3.可实现自适应布局，当屏幕更大时，可实现一行看到的字体更多。</p>
+</li>
+<li><strong> 缺点 </strong><br>1.依赖scss环境<br>2.行内样式无法采用rem以及vw计算方式</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/29/fe_interview/" rel="next" title="前端知识点">
+                <i class="fa fa-chevron-left"></i> 前端知识点
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Lemon" />
+            
+              <p class="site-author-name" itemprop="name">Lemon</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/yuwyuw" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://weibo.com/5553498097/profile?topnav=1&wvr=6" target="_blank" title="微博">
+                    
+                      <i class="fa fa-fw fa-globe"></i>微博</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://xiaoda.github.io/" target="_blank" title="小打博客">
+                    
+                      <i class="fa fa-fw fa-globe"></i>小打博客</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://wangmuqi.github.io/" target="_blank" title="婷婷博客">
+                    
+                      <i class="fa fa-fw fa-globe"></i>婷婷博客</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://liuzmeng.github.io/" target="_blank" title="剑走偏锋博客">
+                    
+                      <i class="fa fa-fw fa-globe"></i>剑走偏锋博客</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://fe.anchnet.com/" target="_blank" title="安畅前端博客">
+                    
+                      <i class="fa fa-fw fa-globe"></i>安畅前端博客</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#像素（pixel）"><span class="nav-number">1.</span> <span class="nav-text">像素（pixel）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三个视口"><span class="nav-number">2.</span> <span class="nav-text">三个视口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#viewport"><span class="nav-number">3.</span> <span class="nav-text">viewport</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#长度单位"><span class="nav-number">4.</span> <span class="nav-text">长度单位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#利用视口单位适配页面"><span class="nav-number">5.</span> <span class="nav-text">利用视口单位适配页面</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#做法一：仅使用vw作为CSS单位"><span class="nav-number">5.0.1.</span> <span class="nav-text">做法一：仅使用vw作为CSS单位</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#做法二：将视口宽度设置为750px。"><span class="nav-number">5.0.2.</span> <span class="nav-text">做法二：将视口宽度设置为750px。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#做法三：使用rem布局-网易做法"><span class="nav-number">5.0.3.</span> <span class="nav-text">做法三：使用rem布局(网易做法)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#做法四：使用vw和rem布局方式"><span class="nav-number">5.0.4.</span> <span class="nav-text">做法四：使用vw和rem布局方式</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lemon</span>
+
+  
+</div>
+
+
+
+<span id="busuanzi_container_site_pv">
+    本站总访问量：<span id="busuanzi_value_site_pv"></span>次
+</span>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("loN0PiCEyO4ELU6Q5aohMM0p-gzGzoHsz", "0h2ms8uh8FuFC9FNu95qh7Bv");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("loN0PiCEyO4ELU6Q5aohMM0p-gzGzoHsz", "0h2ms8uh8FuFC9FNu95qh7Bv");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+</body>
+</html>
