@@ -79,17 +79,13 @@
 
 
 
-<meta name="description" content="当你遇到“函数有一个参数n，返回值是一个数组，数据随机不重复，返回n个整数取值范围是2-32”，你会如何处理。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="你会如何处理这样的需求">
-<meta property="og:url" content="http://yoursite.com/2018/01/10/coding/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lemon&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/archives/2018/06/index.html">
 <meta property="og:site_name" content="Lemon&#39;s Blog">
-<meta property="og:description" content="当你遇到“函数有一个参数n，返回值是一个数组，数据随机不重复，返回n个整数取值范围是2-32”，你会如何处理。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-11T09:48:12.356Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="你会如何处理这样的需求">
-<meta name="twitter:description" content="当你遇到“函数有一个参数n，返回值是一个数组，数据随机不重复，返回n个整数取值范围是2-32”，你会如何处理。">
+<meta name="twitter:title" content="Lemon&#39;s Blog">
 
 
 
@@ -119,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/10/coding/"/>
+  <link rel="canonical" href="http://yoursite.com/archives/2018/06/"/>
 
 
 
 
 
-  <title>你会如何处理这样的需求 | Lemon's Blog</title>
+  <title>归档 | Lemon's Blog</title>
   
 
 
@@ -144,7 +140,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left page-archive">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -238,166 +234,74 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block archive">
+    <div id="posts" class="posts-collapse">
+      <span class="archive-move-on"></span>
 
-  
+      <span class="archive-page-counter">
+        
+        
+        
+          
+        
+        嗯..! 目前共计 16 篇日志。 继续努力。
+      </span>
 
-  
-  
-  
+      
+
+        
+        
+        
+
+        
+          
+          <div class="collection-title">
+            <h1 class="archive-year" id="archive-year-2018">2018</h1>
+          </div>
+        
+        
+
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/10/coding/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lemon">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lemon's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">你会如何处理这样的需求</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/2018/06/11/calendar/" itemprop="url">
               
-                <span class="post-meta-item-text">发表时间：</span>
+                <span itemprop="name">jQuery封装日程表插件</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-10T14:32:14+08:00">
-                2018-01-10
-              </time>
-            
+            </a>
+        
+      </h2>
 
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-06-11T16:39:23+08:00"
+              content="2018-06-11" >
+          06-11
+        </time>
+      </div>
 
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/01/10/coding/" class="leancloud_visitors" data-flag-title="你会如何处理这样的需求">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>当你遇到“函数有一个参数n，返回值是一个数组，数据随机不重复，返回n个整数取值范围是2-32”，你会如何处理。<br><a id="more"></a></p>
-<blockquote>
-<p>这个题目很简单，却有很多的小细节需要考虑到。<br>1.参数n一定存在嘛？如果不存在会怎样？<br>2.参数n的数据格式一定正确嘛？如果是n是负数、0、浮点数、String类型的数字会怎样？<br>3.有验证返回的数据随机不重复嘛？<br>4.随机数的取值范围是2-32嘛？</p>
-</blockquote>
-<p>我的实现原理为依次随机取出指定规则内的数字，然后判断是否重复，如果不重复，则添加到指定容器中。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">random</span> (<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> numberlist = [],min = <span class="number">2</span>, max = <span class="number">32</span>;</span><br><span class="line">  <span class="keyword">if</span> (!checkParameter(n)) <span class="keyword">return</span> numberlist;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> random = getRand(min,max)</span><br><span class="line">    checkInArr(numberlist,random) ? i-- : numberlist.push(random);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> numberlist;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkParameter</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> boolean  = !! (n &amp;&amp; <span class="keyword">typeof</span> <span class="built_in">Number</span>(n) === <span class="string">'number'</span>)</span><br><span class="line">  <span class="keyword">return</span> boolean</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRand</span> (<span class="params">min,max</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*(max-min+<span class="number">1</span>)+min);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkInArr</span> (<span class="params">arr, random</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arr.includes(random)</span><br><span class="line">&#125;</span><br><span class="line">random(<span class="number">6</span>);</span><br></pre></td></tr></table></figure></p>
-<p>这段代码确实满足了以上条件，但有些不足之处。首先每次都需要去判断取出的数字是否重复，其次如果修改取值范围，对于调用者来说，并不是很友好。在其次，命令并不是很规范。于是，我做出了以下修改。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">randomList</span> (<span class="params">min, max, count</span>) </span>&#123;</span><br><span class="line">     [min,max,count] = [<span class="built_in">Number</span>(min), <span class="built_in">Number</span>(max), <span class="built_in">Number</span>(count)]</span><br><span class="line">     <span class="keyword">let</span> result = [],</span><br><span class="line">     randomList = [],</span><br><span class="line">     checkResult = _checkParam(min, max, count);</span><br><span class="line">     <span class="keyword">if</span> (!checkResult) <span class="keyword">return</span> result;</span><br><span class="line">     <span class="comment">// 确定数组的取值范围是min~max</span></span><br><span class="line">     <span class="keyword">for</span> (<span class="keyword">var</span> i = min; i &lt;= max; i++) &#123;</span><br><span class="line">       randomList.push(i)</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="comment">// 让数组随机</span></span><br><span class="line">     randomList.sort(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="built_in">Math</span>.random() - <span class="number">0.5</span>;</span><br><span class="line">     &#125;)</span><br><span class="line">     <span class="comment">// 取出指定数目的数组</span></span><br><span class="line">     result = randomList.splice(<span class="number">0</span>, count);</span><br><span class="line">     <span class="keyword">return</span> result;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">_checkParam</span> (<span class="params">min, max, count</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">let</span> result = <span class="literal">false</span>,</span><br><span class="line">     paramList = [min, max, count];</span><br><span class="line">     paramList.filter(<span class="function">(<span class="params">values</span>) =&gt;</span> values &amp;&amp; <span class="keyword">typeof</span> values === <span class="string">'number'</span>);</span><br><span class="line">     <span class="keyword">if</span> (paramList.length &gt; <span class="number">2</span> &amp;&amp; max - min &gt; <span class="number">0</span>) &#123;</span><br><span class="line">       result = <span class="literal">true</span>;</span><br><span class="line"><span class="string">``</span>     &#125;</span><br><span class="line">     <span class="keyword">return</span> result;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="built_in">console</span>.log(randomList(<span class="string">'5'</span>, <span class="string">'10'</span>, <span class="string">' 3 '</span>));</span><br></pre></td></tr></table></figure>
-<p>让数组随机不重复以后，在取出所需要的数据，这大大提高了执行的效率。其次，让调用者修改取值范围提高了实用性。</p>
-<blockquote>
-<p>其实写代码本身是简单的，但是涉及以下几个方面，可能就没有那么简单了。<br><code>安全</code> 指代码执行性，我们写出的代码首先需要保证可以执行，一旦缺少这个前提，其他都是无用功。<br><code>可用</code> 指满足需求性，我们写出的代码需要满足需求，这样才是一段及格的代码。<br><code>健壮</code> 指处理多元性，我们写代码的时候需要去处理不同的场景，如兼容处理、边界处理、用户验证处理、异常处理、隐藏逻辑处理等。<br><code>宽容</code> 指角色包容性，我们写代码需要对需求宽容、对用户宽容、对维护者宽容、对调用者宽容。<br>若我们能做到这些，才是一名有钱途的开发者。</p>
-</blockquote>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/12/28/sublime/" rel="next" title="常用Sublime高效快捷键汇集">
-                <i class="fa fa-chevron-left"></i> 常用Sublime高效快捷键汇集
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/11/php_user_agent/" rel="prev" title="判断当前访问设备以及浏览器版本">
-                判断当前访问设备以及浏览器版本 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
 
-    <div class="post-spread">
       
+
     </div>
   </div>
+  
+  
+  
+
+  
+
 
 
           </div>
@@ -405,10 +309,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -643,10 +543,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
-
 
   
 
