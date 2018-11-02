@@ -1,6 +1,6 @@
 ---
 title: mac xcode 下载 ios指定版本的模拟器
-date: 2018-18-28 11:32:14
+date: 2018-11-02 11:32:14
 tags:
 author: lemon
 ---
