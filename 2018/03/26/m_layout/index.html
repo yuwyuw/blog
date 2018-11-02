@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Lemon&#39;s Blog">
 <meta property="og:description" content="像素（pixel）  设备像素  ：设备屏幕的物理像素。  CSS像素  ：是浏览器使用的抽象单位，为Web开发者创造的，用来精确度量网页上的内容。  三个视口桌面上视口宽度等于浏览器宽度，但在手机上有所不同。   布局视口  ：手机上为了容纳为桌面浏览器设计的网站，默认布局视口宽度远大于屏幕宽度，为了让用户看到网站全貌，它会缩小网站。  视觉视口  ：用户正在看到的网站的区域，与设备屏幕一样宽">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-26T07:27:01.520Z">
+<meta property="og:updated_time" content="2018-03-26T15:28:30.806Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于移动端视口的布局方案">
 <meta name="twitter:description" content="像素（pixel）  设备像素  ：设备屏幕的物理像素。  CSS像素  ：是浏览器使用的抽象单位，为Web开发者创造的，用来精确度量网页上的内容。  三个视口桌面上视口宽度等于浏览器宽度，但在手机上有所不同。   布局视口  ：手机上为了容纳为桌面浏览器设计的网站，默认布局视口宽度远大于屏幕宽度，为了让用户看到网站全貌，它会缩小网站。  视觉视口  ：用户正在看到的网站的区域，与设备屏幕一样宽">
@@ -362,9 +362,9 @@
 <li><p>无论是文本还是布局高宽、间距等都使用 vw 作为 CSS 单位</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test-component</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    &amp;<span class="selector-class">.test1</span> &#123;</span><br><span class="line">      <span class="attribute">font-size</span>: fvw(<span class="number">12</span>);</span><br><span class="line">      <span class="attribute">width</span>: vw(<span class="number">688</span>);</span><br><span class="line">      <span class="attribute">height</span>: vw(<span class="number">180</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    &amp;<span class="selector-class">.test2</span> &#123;</span><br><span class="line">      <span class="attribute">font-size</span>: fvw(<span class="number">20</span>);</span><br><span class="line">      <span class="attribute">width</span>: vw(<span class="number">750</span>);</span><br><span class="line">      <span class="attribute">height</span>: vw(<span class="number">180</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong> 优点 </strong><br>1.不需要依赖脚本<br>2.可以控制最小的字体</p>
+<li><p><strong> 优点 </strong><br>1.不需要依赖脚本<br>2.可以控制最小的字体<br>3.可以实现等比缩放</p>
 </li>
-<li><strong> 缺点 </strong><br>1.需要引入scss环境<br>2.行业样式无法使用定义的vw计算方法<br>3.实现原理是等比放大或者缩小，不能实现当屏幕更大时，一行看到的字体更多。</li>
+<li><strong> 缺点 </strong><br>1.需要使用scss语法<br>2.在标签上直接定义的样式无法使用scss语法中的计算功能。<br>3.实现原理是等比放大或者缩小，不能实现当屏幕更大时，一行看到的字体更多。</li>
 </ul>
 <h6 id="做法二：将视口宽度设置为750px。"><a href="#做法二：将视口宽度设置为750px。" class="headerlink" title="做法二：将视口宽度设置为750px。"></a>做法二：将视口宽度设置为750px。</h6><ul>
 <li><p>使用viewport，理想视口为750</p>
@@ -373,7 +373,7 @@
 <li><p>直接使用设计稿所定义的长度。不需要转换。</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test-component</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    &amp;<span class="selector-class">.test1</span> &#123;</span><br><span class="line">      <span class="attribute">font-size</span>: <span class="number">24px</span>;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">688px</span>;</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">180px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    &amp;<span class="selector-class">.test2</span> &#123;</span><br><span class="line">      <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">750px</span>;</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">180px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong> 优点 </strong><br>1.不需要依赖scss环境<br>2.不需要进行单位转换，直接使用设计稿中的长度大小即可。</p>
+<li><p><strong> 优点 </strong><br>1.不需要依赖scss语法。<br>2.不需要进行单位转换，直接使用设计稿中的长度大小即可。<br>3.可以实现等比缩放</p>
 </li>
 <li><strong> 缺点 </strong><br>1.浏览器调试的时候可能会出现问题，实际情况以真机为准。<br>2.实现原理是等比放大或者缩小，不能实现当屏幕更大时，一行看到的字体更多。</li>
 </ul>
@@ -385,9 +385,9 @@
 <li><p>使用</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test-component</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    &amp;<span class="selector-class">.test1</span> &#123;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">6.88rem</span>;</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">1.8rem</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong> 优点 </strong><br>1.不依赖于scss<br>2.可实现自适应布局，当屏幕更大时，可实现一行看到的字体更多。<br>3.当屏幕变小时，看到的字体更大，屏幕变大时，看到的字体更多</p>
+<li><p><strong> 优点 </strong><br>1.不依赖于scss语法<br>2.可以实现等比缩放</p>
 </li>
-<li><strong> 缺点 </strong><br>1.无法控制最小字体。</li>
+<li><strong> 缺点 </strong><br>1.无法控制最小字体。<br>2.实现原理是等比放大或者缩小，不能实现当屏幕更大时，一行看到的字体更多。</li>
 </ul>
 <h6 id="做法四：使用vw和rem布局方式"><a href="#做法四：使用vw和rem布局方式" class="headerlink" title="做法四：使用vw和rem布局方式"></a>做法四：使用vw和rem布局方式</h6><ul>
 <li><p>使用viewport，理想视口为设备宽度</p>
@@ -401,7 +401,7 @@
 </li>
 <li><p><strong> 优点 </strong><br>1.不需要依赖脚本<br>2.可以控制最小字体<br>3.可实现自适应布局，当屏幕更大时，可实现一行看到的字体更多。</p>
 </li>
-<li><strong> 缺点 </strong><br>1.依赖scss环境<br>2.行内样式无法采用rem以及vw计算方式</li>
+<li><strong> 缺点 </strong><br>1.依赖scss语法<br>2.在div上直接定义样式时无法采用scss中定义的计算方式。</li>
 </ul>
 
       
@@ -436,6 +436,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/11/calendar/" rel="prev" title="jQuery封装日程表插件">
+                jQuery封装日程表插件 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -516,7 +520,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
