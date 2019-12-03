@@ -31,7 +31,7 @@ Atwood's Law: Any application that can be written in JavaScript, will eventually
 
 1. 为了用户的（信息）安全，在浏览器中的 JavaScript 的能力是有限的。这样主要是为了阻止邪恶的网站获得或修改用户的私人数据。这些限制的例子有：
 	- 网页中的 JavaScript 不能读、写、复制及执行用户磁盘上的文件或程序。
-	- 浏览器的同源策会影响JS的访问（[浏览器的同源策略](https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy)），比如你访问的是 ```https:www.baidu.com``` , JavaScript 肯定不能访问 ```https:www.jd.com```的内容。在比方说你在页面里面嵌入了百度地图,是无法直接修改百度地图任何信息，只能通过官方提供的接口进行修改。因为不同源，JS无法执行。
+	- 浏览器的同源策略会影响JS的访问（[浏览器的同源策略](https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy)），比如你访问的是 ```https:www.baidu.com``` , JavaScript 肯定不能访问 ```https:www.jd.com```的内容。在比方说你在页面里面嵌入了百度地图,是无法直接修改百度地图任何信息，只能通过官方提供的接口进行修改。因为不同源，JS无法执行。
 
 ##### JavaScript由哪些部分组成
 JavaScript 由三大部分组件，分别为核心（ECMA Script）、文档对象模型（DOM）、浏览器对象模型（BOM）
