@@ -5,11 +5,11 @@ tags:
 author: lemon
 ---
 作为一名前端开发工程师，每天 coding JS，那你知道什么是 JS ，又由哪些部分组成吗？
-###### JavaScript 的起源
+##### JavaScript 的起源
 JavaScript 诞生于1995年，主要目的是为了处理以前由服务器端语言负责的一些输入验证的操作。在 JavaScript 诞生以前，必须把表单数据发送给服务器端才能确定用户是否可以填写数据，是否输入无效的值。由于拨号上网速度太慢，对用户上网产生十分严重的影响。当时走在技术前沿的 Netscape 公司决定开发一种客户端语言，用于处理这种简单的验证。
 当时就职于 Netscape 公司的 布兰登 · 艾奇 （Brendan Eich）用时10天开发出一种名为 LiveScript 的脚本语言。 Netscape 公司为了搭上媒体热炒 Java 的顺风车，临时把 LiveScript 改名为 JavaScript, 而实际上， JavaScript 和 Java一点关系也没有。
 
-###### JavaScript是什么
+##### JavaScript是什么
 随着时间的推移，JavaScript 也日益强大，JavaScript 逐渐成为浏览器必备的一项特色功能。JavaScript 也不在局限于表单验证，而是具备了与浏览器窗口以及内容的交互能力。JavaScript 成为一门功能全面的编程语言， 能够处理复杂的计算和交互，拥有了闭包、匿名 甚至元编程等特性。
 
 - 浏览器中的 JavaScript 能做什么
@@ -33,7 +33,7 @@ Atwood's Law: Any application that can be written in JavaScript, will eventually
 	- 网页中的 JavaScript 不能读、写、复制及执行用户磁盘上的文件或程序。
 	- 浏览器的同源策会影响JS的访问（[浏览器的同源策略](https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy)），比如你访问的是 ```https:www.baidu.com``` , JavaScript 肯定不能访问 ```https:www.jd.com```的内容。在比方说你在页面里面嵌入了百度地图,是无法直接修改百度地图任何信息，只能通过官方提供的接口进行修改。因为不同源，JS无法执行。
 
-###### JavaScript由哪些部分组成
+##### JavaScript由哪些部分组成
 JavaScript 由三大部分组件，分别为核心（ECMA Script）、文档对象模型（DOM）、浏览器对象模型（BOM）
 
 ![alt JavaScript组成](/images/javascript1.jpeg)
@@ -51,7 +51,7 @@ ECMAScript 是一种标准，标准化了脚本语言。
 	- 提供浏览器加载页面的详细信息 location对象
 	- 对cookies的支持
 
-###### 小结
+##### 小结
 JavaScript是一种专为与网页交互而设计的脚本语言，由下列3个部分组成：
 - ECMAScript 提供核心语言功能，是一种标准
 - 文档对象模型（DOM），提供访问和操作网页内容的方法和接口
