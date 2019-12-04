@@ -1,5 +1,5 @@
 ---
-title: 常见的linux命令
+title: 常见的linux命令(未完待续)
 date: 2019-12-04 17:08:11
 tags:
 ---
