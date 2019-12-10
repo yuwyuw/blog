@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lemon&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2017/06/index.html">
+<meta name="description" content="有这样一个需求。从A页面访问B页面，B页面需要刷新加载，从B页面返回A页面，A页面缓存处理。你会怎么处理？场景：列表页访问详情页面后，从详情页面返回列表页面时，列表页面滚动到上次浏览的位置。方便用户继续浏览。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue 实现前进刷新，后退缓存处理，保留上次浏览位置">
+<meta property="og:url" content="http://yoursite.com/2019/12/10/scroll-behavior/index.html">
 <meta property="og:site_name" content="Lemon&#39;s Blog">
+<meta property="og:description" content="有这样一个需求。从A页面访问B页面，B页面需要刷新加载，从B页面返回A页面，A页面缓存处理。你会怎么处理？场景：列表页访问详情页面后，从详情页面返回列表页面时，列表页面滚动到上次浏览的位置。方便用户继续浏览。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-10T03:15:49.575Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lemon&#39;s Blog">
+<meta name="twitter:title" content="Vue 实现前进刷新，后退缓存处理，保留上次浏览位置">
+<meta name="twitter:description" content="有这样一个需求。从A页面访问B页面，B页面需要刷新加载，从B页面返回A页面，A页面缓存处理。你会怎么处理？场景：列表页访问详情页面后，从详情页面返回列表页面时，列表页面滚动到上次浏览的位置。方便用户继续浏览。">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/06/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/12/10/scroll-behavior/"/>
 
 
 
 
 
-  <title>归档 | Lemon's Blog</title>
+  <title>Vue 实现前进刷新，后退缓存处理，保留上次浏览位置 | Lemon's Blog</title>
   
 
 
@@ -140,7 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,74 +238,169 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 24 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/10/scroll-behavior/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/06/07/vue/" itemprop="url">
-              
-                <span itemprop="name">vue使用指南</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Vue 实现前进刷新，后退缓存处理，保留上次浏览位置</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-07T11:57:00+08:00"
-              content="2017-06-07" >
-          06-07
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表时间：</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-10T10:19:12+08:00">
+                2019-12-10
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/12/10/scroll-behavior/" class="leancloud_visitors" data-flag-title="Vue 实现前进刷新，后退缓存处理，保留上次浏览位置">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <p>有这样一个需求。从A页面访问B页面，B页面需要刷新加载，从B页面返回A页面，A页面缓存处理。你会怎么处理？<br>场景：列表页访问详情页面后，从详情页面返回列表页面时，列表页面滚动到上次浏览的位置。方便用户继续浏览。<br><a id="more"></a></p>
+<h5 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h5><p>1.如果想要A页面停留在上次浏览的位置，必须记录离开A页面前的浏览位置。<br>2.如何区分是否缓存处理？<br>3.A页面如何滚动到上次浏览的位置？</p>
+<h5 id="如何Coding？"><a href="#如何Coding？" class="headerlink" title="如何Coding？"></a>如何Coding？</h5><ul>
+<li><p>如何记录离开A页面前的浏览位置？<br>我们可以利用Vue Router 来处理, Vue Router中提供了一个名为beforeRouteLeave方法，可以处理离开页面前的一些操作。<br>我们可以在A页面中加入这样的一个方法，来记录当前的页面浏览位置。并保存到meta中。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// A页面</span></span><br><span class="line">beforeRouteLeave (to, <span class="keyword">from</span>, next) &#123;</span><br><span class="line">	<span class="keyword">let</span> position = <span class="built_in">document</span>.documentElement.scrollTop || <span class="built_in">document</span>.body.scrollTop</span><br><span class="line">	<span class="keyword">from</span>.meta.savedPosition = position</span><br><span class="line">	next()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如何区分是否缓存处理？<br>我们依旧可以利用 Vue 的 keep-alive 组件 和 Vue 的 Router 共同处理，在根组件（以App.vue为例）中，加入下面代码。</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在Vue router中标记是否需要缓存处理</span></span><br><span class="line">&#123;</span><br><span class="line">  name: <span class="string">'A'</span>,</span><br><span class="line">  path: <span class="string">'/a'</span>,</span><br><span class="line">  component: <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'@/pages/A'</span>),</span><br><span class="line">  meta: &#123;</span><br><span class="line">    keepAlive: <span class="literal">true</span></span><br><span class="line">    <span class="comment">// keepAlive为 true表示缓存处理</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- App.vue --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 如果路由里面的meta存在keepAlive，就缓存处理 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">keep-alive</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">router-view</span> <span class="attr">v-if</span>=<span class="string">"$route.meta.keepAlive"</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">router-view</span> <span class="attr">v-if</span>=<span class="string">"!$route.meta.keepAlive"</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>如何加载到上次浏览位置？<br>我们可以利用Vue Router中提供的一个名为<a href="https://router.vuejs.org/zh/guide/advanced/scroll-behavior.html" target="_blank" rel="noopener">scrollBehavior</a>的方法。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">scrollBehavior (to, <span class="keyword">from</span>, savedPosition) &#123;</span><br><span class="line">  <span class="keyword">if</span> (savedPosition) &#123;</span><br><span class="line">    <span class="keyword">return</span> savedPosition</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (to.meta.savedPosition) &#123;</span><br><span class="line">    	<span class="comment">// 如果meta信息中存在savedPosition，页面就滚动到上次浏览的位置（savedPosition）</span></span><br><span class="line">      <span class="keyword">return</span> &#123; <span class="attr">x</span>: <span class="number">0</span>, <span class="attr">y</span>: to.meta.savedPosition&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &#123; <span class="attr">x</span>: <span class="number">0</span>, <span class="attr">y</span>: <span class="number">0</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/04/linux/" rel="next" title="常见的Linux命令（未完待续...）">
+                <i class="fa fa-chevron-left"></i> 常见的Linux命令（未完待续...）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/10/vue-route/" rel="prev" title="Vue 中 $router 和 $route 的区别">
+                Vue 中 $router 和 $route 的区别 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -309,6 +408,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -329,8 +432,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -422,6 +534,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#需求分析"><span class="nav-number">1.</span> <span class="nav-text">需求分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何Coding？"><span class="nav-number">2.</span> <span class="nav-text">如何Coding？</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -549,6 +677,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
