@@ -57,7 +57,7 @@ scrollBehavior (to, from, savedPosition) {
     return savedPosition
   } else {
     if (to.meta.savedPosition) {
-    	// 如果meta信息中存在savedPosition，页面就滚动到上次浏览的位置（）
+    	// 如果meta信息中存在savedPosition，页面就滚动到上次浏览的位置（savedPosition）
       return { x: 0, y: to.meta.savedPosition}
     }
     return { x: 0, y: 0 }
