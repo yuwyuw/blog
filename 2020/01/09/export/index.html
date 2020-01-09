@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="有关Nginx常见命令 常见查看Nginx信息命令查看版本信息1nginx -v 查看编译器版本和配置参数1nginx -V 检测配置(也可用于查找文件目录)1nginx -t 查看进程1ps -ef |grep nginx 重新打开日志文件1nginx -s reopen 常见操作Nginx信息命令启动nginx123nginx或者brew services start nginx 重新启用12">
+<meta name="description" content="ES6的精髓之一就是它的模块（module）体系，在使用 module 时,我们总会和 export 以及 exports 打交道，本文将给大家介绍这2点的差异点，以供大家学习。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac下常见Nginx使用命令（未完待续...）">
-<meta property="og:url" content="http://yoursite.com/2019/11/29/nginx-opt/index.html">
+<meta property="og:title" content="一篇文章带你看懂export、export default 命令差异">
+<meta property="og:url" content="http://yoursite.com/2020/01/09/export/index.html">
 <meta property="og:site_name" content="Lemon&#39;s Blog">
-<meta property="og:description" content="有关Nginx常见命令 常见查看Nginx信息命令查看版本信息1nginx -v 查看编译器版本和配置参数1nginx -V 检测配置(也可用于查找文件目录)1nginx -t 查看进程1ps -ef |grep nginx 重新打开日志文件1nginx -s reopen 常见操作Nginx信息命令启动nginx123nginx或者brew services start nginx 重新启用12">
+<meta property="og:description" content="ES6的精髓之一就是它的模块（module）体系，在使用 module 时,我们总会和 export 以及 exports 打交道，本文将给大家介绍这2点的差异点，以供大家学习。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-03T07:34:32.842Z">
+<meta property="og:updated_time" content="2020-01-09T06:35:03.540Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac下常见Nginx使用命令（未完待续...）">
-<meta name="twitter:description" content="有关Nginx常见命令 常见查看Nginx信息命令查看版本信息1nginx -v 查看编译器版本和配置参数1nginx -V 检测配置(也可用于查找文件目录)1nginx -t 查看进程1ps -ef |grep nginx 重新打开日志文件1nginx -s reopen 常见操作Nginx信息命令启动nginx123nginx或者brew services start nginx 重新启用12">
+<meta name="twitter:title" content="一篇文章带你看懂export、export default 命令差异">
+<meta name="twitter:description" content="ES6的精髓之一就是它的模块（module）体系，在使用 module 时,我们总会和 export 以及 exports 打交道，本文将给大家介绍这2点的差异点，以供大家学习。">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/29/nginx-opt/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/01/09/export/"/>
 
 
 
 
 
-  <title>Mac下常见Nginx使用命令（未完待续...） | Lemon's Blog</title>
+  <title>一篇文章带你看懂export、export default 命令差异 | Lemon's Blog</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/29/nginx-opt/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/09/export/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lemon">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mac下常见Nginx使用命令（未完待续...）</h1>
+          <h1 class="post-title" itemprop="name headline">一篇文章带你看懂export、export default 命令差异</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表时间：</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-29T14:34:31+08:00">
-                2019-11-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-09T11:19:50+08:00">
+                2020-01-09
               </time>
             
 
@@ -299,7 +299,7 @@
 
           
           
-             <span id="/2019/11/29/nginx-opt/" class="leancloud_visitors" data-flag-title="Mac下常见Nginx使用命令（未完待续...）">
+             <span id="/2020/01/09/export/" class="leancloud_visitors" data-flag-title="一篇文章带你看懂export、export default 命令差异">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -330,19 +330,60 @@
       
 
       
-        <p>有关Nginx常见命令</p>
-<h5 id="常见查看Nginx信息命令"><a href="#常见查看Nginx信息命令" class="headerlink" title="常见查看Nginx信息命令"></a>常见查看Nginx信息命令</h5><h6 id="查看版本信息"><a href="#查看版本信息" class="headerlink" title="查看版本信息"></a>查看版本信息</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -v</span><br></pre></td></tr></table></figure>
-<h6 id="查看编译器版本和配置参数"><a href="#查看编译器版本和配置参数" class="headerlink" title="查看编译器版本和配置参数"></a>查看编译器版本和配置参数</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -V</span><br></pre></td></tr></table></figure>
-<h6 id="检测配置-也可用于查找文件目录"><a href="#检测配置-也可用于查找文件目录" class="headerlink" title="检测配置(也可用于查找文件目录)"></a>检测配置(也可用于查找文件目录)</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -t</span><br></pre></td></tr></table></figure>
-<h6 id="查看进程"><a href="#查看进程" class="headerlink" title="查看进程"></a>查看进程</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef |grep nginx</span><br></pre></td></tr></table></figure>
-<h6 id="重新打开日志文件"><a href="#重新打开日志文件" class="headerlink" title="重新打开日志文件"></a>重新打开日志文件</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reopen</span><br></pre></td></tr></table></figure>
-<h5 id="常见操作Nginx信息命令"><a href="#常见操作Nginx信息命令" class="headerlink" title="常见操作Nginx信息命令"></a>常见操作Nginx信息命令</h5><h6 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动nginx</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nginx</span><br><span class="line">或者</span><br><span class="line">brew services start nginx</span><br></pre></td></tr></table></figure>
-<h6 id="重新启用"><a href="#重新启用" class="headerlink" title="重新启用"></a>重新启用</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br><span class="line">或者</span><br><span class="line">brew services restart nginx</span><br></pre></td></tr></table></figure>
-<h6 id="快速关闭"><a href="#快速关闭" class="headerlink" title="快速关闭"></a>快速关闭</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s stop</span><br></pre></td></tr></table></figure>
-<h6 id="优雅关闭-进程如果还在服务中，那么就不会关闭该进程，直到进程完成服务为止"><a href="#优雅关闭-进程如果还在服务中，那么就不会关闭该进程，直到进程完成服务为止" class="headerlink" title="优雅关闭(进程如果还在服务中，那么就不会关闭该进程，直到进程完成服务为止)"></a>优雅关闭(进程如果还在服务中，那么就不会关闭该进程，直到进程完成服务为止)</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s quit</span><br></pre></td></tr></table></figure>
+        <p>ES6的精髓之一就是它的模块（module）体系，在使用 module 时,我们总会和 export 以及 exports 打交道，本文将给大家介绍这2点的差异点，以供大家学习。<br><a id="more"></a></p>
+<h5 id="1-exports-default-后面不能跟变量声明语句-export-后面可以跟变量申明语句。"><a href="#1-exports-default-后面不能跟变量声明语句-export-后面可以跟变量申明语句。" class="headerlink" title="1.exports default 后面不能跟变量声明语句, export 后面可以跟变量申明语句。"></a>1.exports default 后面不能跟变量声明语句, export 后面可以跟变量申明语句。</h5><p>本质上，export default就是输出一个叫做default的变量或方法，然后系统允许你为它取任意名字。正是因为export default命令其实只是输出一个叫做default的变量，所以它后面不能跟变量声明语句。接下来，我们可以实践下。</p>
+<ul>
+<li><p>首先看看 <code>export</code> 的执行情况：</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">let</span> test1 = <span class="string">'test1'</span>;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;test1&#125; <span class="keyword">from</span> <span class="string">"./index"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(test1);</span><br><span class="line"><span class="string">`</span></span><br></pre></td></tr></table></figure>
+<p>  上述代码的执行结果如下：</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// test1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>接下来，我们来看看<code>export default</code> 的执行情况</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">let</span> test1 = <span class="string">'test1'</span></span><br></pre></td></tr></table></figure>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> test1 <span class="keyword">from</span> <span class="string">"./index"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(test1);</span><br></pre></td></tr></table></figure>
+<p> 上述代码的执行结果如下：</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 报错。</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="2-使用export，-import-需要加大括号-除外-export-default-则不需要。"><a href="#2-使用export，-import-需要加大括号-除外-export-default-则不需要。" class="headerlink" title="2.使用export， import 需要加大括号(* 除外), export default 则不需要。"></a>2.使用export， import 需要加大括号(* 除外), export default 则不需要。</h5><h5 id="3-export-default-在一个模块里只能有一个，但是export可以有多个"><a href="#3-export-default-在一个模块里只能有一个，但是export可以有多个" class="headerlink" title="3.export default 在一个模块里只能有一个，但是export可以有多个"></a>3.export default 在一个模块里只能有一个，但是export可以有多个</h5><ul>
+<li><p>首先看看 <code>export</code> 的执行情况：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test1 = <span class="string">'test1'</span></span><br><span class="line"><span class="keyword">let</span> test2 = <span class="string">'test2'</span></span><br><span class="line"><span class="keyword">export</span> &#123;</span><br><span class="line">	test1,</span><br><span class="line">	test2</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;test1, test2&#125;  <span class="keyword">from</span> <span class="string">"./index"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(test1, test2);</span><br></pre></td></tr></table></figure>
+<p>  上述代码的执行结果如下：</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// test1 test2</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>接下来看看export default 的执行情况</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test1 = <span class="string">'test1'</span></span><br><span class="line"><span class="keyword">let</span> test2 = <span class="string">'test2'</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> test1</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> test2</span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> test1, test2 <span class="keyword">from</span> <span class="string">"./index"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(test1, test2);</span><br></pre></td></tr></table></figure>
+<p>  上述代码的执行结果如下：</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="4-通过export导出的属性或者方法可以修改，通过export-default-导出的基本类型不可修改"><a href="#4-通过export导出的属性或者方法可以修改，通过export-default-导出的基本类型不可修改" class="headerlink" title="4.通过export导出的属性或者方法可以修改，通过export default 导出的基本类型不可修改"></a>4.通过export导出的属性或者方法可以修改，通过export default 导出的基本类型不可修改</h5><ul>
+<li><p>首先看看 <code>export</code> 的执行情况：</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test1 = <span class="string">'test1'</span></span><br><span class="line"><span class="keyword">let</span> test2 = &#123;</span><br><span class="line">	a: <span class="string">'1'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span>  &#123;</span><br><span class="line">	test1,</span><br><span class="line">	test2</span><br><span class="line">&#125;</span><br><span class="line">test1 = <span class="string">'test1 modify'</span></span><br><span class="line">test2.a = <span class="string">'1 modify'</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;test1, test2&#125; <span class="keyword">from</span> <span class="string">"./index"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(test1, test2);</span><br></pre></td></tr></table></figure>
+<p>  上述代码的执行结果如下：</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test1 modify &#123;<span class="attr">a</span>: <span class="string">"1 modify"</span>&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>接下来看看export default 的执行情况</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test1 = <span class="string">'test1'</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> test1</span><br><span class="line">test1 = <span class="string">'test1 modify'</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> test1  <span class="keyword">from</span> <span class="string">"./index"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(test1);</span><br></pre></td></tr></table></figure>
+<p>  上述代码的执行结果如下：</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// test1</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>当运行nginx -s quit时，Nginx 会等待工作进程处理完成当前请求，然后将其关闭。当你修改配置文件后，并不会立即生效，而是等待重启或者收到nginx -s reload信号。<br>当 Nginx 收到 nginx -s reload 信号后，首先检查配置文件的语法。语法正确后，主线程会开启新的工作线程并向旧的工作线程发送关闭信号，如果语法不正确，则主线程回滚变化并继续使用旧的配置。当工作进程收到主进程的关闭信号后，会在处理完当前请求之后退出。</p>
+<p>上述代码证明export导出的属性或者方法可以修改，无论是基本类型，还是引用类型。</p>
 </blockquote>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test1 = &#123;</span><br><span class="line">	a: <span class="string">'test1'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> test1</span><br><span class="line">test1.a = <span class="string">'test1 modify'</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> test1  <span class="keyword">from</span> <span class="string">"./index"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(test1);</span><br></pre></td></tr></table></figure>
+<p>  上述代码的执行结果如下：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;a: &quot;test1 modify&quot;&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>上述代码证明export default导出的属性或者方法部分可以修改，其中，基本类型无法修改</p>
+</blockquote>
+</li>
+</ul>
 
       
     </div>
@@ -367,8 +408,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/07/node_nvm/" rel="next" title="Node版本管理器-NVM">
-                <i class="fa fa-chevron-left"></i> Node版本管理器-NVM
+              <a href="/2019/12/10/vue-route/" rel="next" title="Vue 中 $router 和 $route 的区别">
+                <i class="fa fa-chevron-left"></i> Vue 中 $router 和 $route 的区别
               </a>
             
           </div>
@@ -376,10 +417,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/12/02/javascript/" rel="prev" title="什么是JavaScript，由哪些部分组成？">
-                什么是JavaScript，由哪些部分组成？ <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -543,7 +580,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#常见查看Nginx信息命令"><span class="nav-number">1.</span> <span class="nav-text">常见查看Nginx信息命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#查看版本信息"><span class="nav-number">1.1.</span> <span class="nav-text">查看版本信息</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#查看编译器版本和配置参数"><span class="nav-number">1.2.</span> <span class="nav-text">查看编译器版本和配置参数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#检测配置-也可用于查找文件目录"><span class="nav-number">1.3.</span> <span class="nav-text">检测配置(也可用于查找文件目录)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#查看进程"><span class="nav-number">1.4.</span> <span class="nav-text">查看进程</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#重新打开日志文件"><span class="nav-number">1.5.</span> <span class="nav-text">重新打开日志文件</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#常见操作Nginx信息命令"><span class="nav-number">2.</span> <span class="nav-text">常见操作Nginx信息命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#启动nginx"><span class="nav-number">2.1.</span> <span class="nav-text">启动nginx</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#重新启用"><span class="nav-number">2.2.</span> <span class="nav-text">重新启用</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#快速关闭"><span class="nav-number">2.3.</span> <span class="nav-text">快速关闭</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#优雅关闭-进程如果还在服务中，那么就不会关闭该进程，直到进程完成服务为止"><span class="nav-number">2.4.</span> <span class="nav-text">优雅关闭(进程如果还在服务中，那么就不会关闭该进程，直到进程完成服务为止)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-exports-default-后面不能跟变量声明语句-export-后面可以跟变量申明语句。"><span class="nav-number">1.</span> <span class="nav-text">1.exports default 后面不能跟变量声明语句, export 后面可以跟变量申明语句。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-使用export，-import-需要加大括号-除外-export-default-则不需要。"><span class="nav-number">2.</span> <span class="nav-text">2.使用export， import 需要加大括号(* 除外), export default 则不需要。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-export-default-在一个模块里只能有一个，但是export可以有多个"><span class="nav-number">3.</span> <span class="nav-text">3.export default 在一个模块里只能有一个，但是export可以有多个</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-通过export导出的属性或者方法可以修改，通过export-default-导出的基本类型不可修改"><span class="nav-number">4.</span> <span class="nav-text">4.通过export导出的属性或者方法可以修改，通过export default 导出的基本类型不可修改</span></a></li></ol></div>
             
 
           </div>
